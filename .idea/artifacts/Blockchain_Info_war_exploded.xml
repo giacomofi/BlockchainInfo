@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Blockchain Info:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Blockchain_Info_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Blockchain Info/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Blockchain Info" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
