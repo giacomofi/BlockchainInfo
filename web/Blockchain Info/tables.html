@@ -45,7 +45,7 @@
             <span class="nav-link-text">Tables</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+       <!-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-wrench"></i>
             <span class="nav-link-text">Components</span>
@@ -58,7 +58,8 @@
               <a href="cards.html">Cards</a>
             </li>
           </ul>
-        </li>
+        </li>-->
+        <!--
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-file"></i>
@@ -79,6 +80,8 @@
             </li>
           </ul>
         </li>
+        -->
+        <!--
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-sitemap"></i>
@@ -104,18 +107,19 @@
                   <a href="#">Third Level Item</a>
                 </li>
                 <li>
-                  <a href="#">Third Level Item</a>
+                  <a hre2f="#">Third Level Item</a>
                 </li>
               </ul>
             </li>
           </ul>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+        -->
+        <!--<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
           <a class="nav-link" href="#">
             <i class="fa fa-fw fa-link"></i>
             <span class="nav-link-text">Link</span>
           </a>
-        </li>
+        </li>-->
       </ul>
       <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">
@@ -126,7 +130,7 @@
       </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <!--<a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fa fa-fw fa-envelope"></i>
             <span class="d-lg-none">Messages
               <span class="badge badge-pill badge-primary">12 New</span>
@@ -134,8 +138,8 @@
             <span class="indicator text-primary d-none d-lg-block">
               <i class="fa fa-fw fa-circle"></i>
             </span>
-          </a>
-          <div class="dropdown-menu" aria-labelledby="messagesDropdown">
+          </a>-->
+          <!--<div class="dropdown-menu" aria-labelledby="messagesDropdown">
             <h6 class="dropdown-header">New Messages:</h6>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">
@@ -157,10 +161,10 @@
             </a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item small" href="#">View all messages</a>
-          </div>
+          </div>-->
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <!-- <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fa fa-fw fa-bell"></i>
             <span class="d-lg-none">Alerts
               <span class="badge badge-pill badge-warning">6 New</span>
@@ -168,8 +172,8 @@
             <span class="indicator text-warning d-none d-lg-block">
               <i class="fa fa-fw fa-circle"></i>
             </span>
-          </a>
-          <div class="dropdown-menu" aria-labelledby="alertsDropdown">
+          </a>-->
+         <!-- <div class="dropdown-menu" aria-labelledby="alertsDropdown">
             <h6 class="dropdown-header">New Alerts:</h6>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">
@@ -200,7 +204,7 @@
             </a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item small" href="#">View all alerts</a>
-          </div>
+          </div>-->
         </li>
         <li class="nav-item">
           <form class="form-inline my-2 my-lg-0 mr-lg-2">
@@ -214,10 +218,10 @@
             </div>
           </form>
         </li>
-        <li class="nav-item">
+       <!-- <li class="nav-item">
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
             <i class="fa fa-fw fa-sign-out"></i>Logout</a>
-        </li>
+        </li>-->
       </ul>
     </div>
   </nav>
@@ -233,28 +237,32 @@
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Data Table Example</div>
+          <i class="fa fa-table"></i>Statistics about protocols</div>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
-                  <th>Name</th>
-                  <th>Position</th>
-                  <th>Office</th>
-                  <th>Age</th>
-                  <th>Start date</th>
-                  <th>Salary</th>
+                    <th>Category</th>
+                    <th>Protocol</th>
+                    <th>Metadata</th>
+                    <th>Embedding Method</th>
+                    <th>First Element</th>
+                    <th>Total Elements</th>
+                    <th>Total Size</th>
+                    <th>Average Size</th>
                 </tr>
               </thead>
               <tfoot>
                 <tr>
-                  <th>Name</th>
-                  <th>Position</th>
-                  <th>Office</th>
-                  <th>Age</th>
-                  <th>Start date</th>
-                  <th>Salary</th>
+                    <th>Category</th>
+                    <th>Protocol</th>
+                    <th>Metadata</th>
+                    <th>Embedding Method</th>
+                    <th>First Element</th>
+                    <th>Total Elements</th>
+                    <th>Total Size</th>
+                    <th>Average Size</th>
                 </tr>
               </tfoot>
               <tbody>
@@ -726,7 +734,7 @@
     <footer class="sticky-footer">
       <div class="container">
         <div class="text-center">
-          <small>Copyright © Your Website 2018</small>
+          <small>Copyright © Giacomo Ibba 2018</small>
         </div>
       </div>
     </footer>
@@ -735,6 +743,7 @@
       <i class="fa fa-angle-up"></i>
     </a>
     <!-- Logout Modal-->
+      <!--
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -752,6 +761,7 @@
         </div>
       </div>
     </div>
+    -->
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

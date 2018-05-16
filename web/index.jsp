@@ -12,7 +12,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>XD</title>
+    <title>Info</title>
   </head>
   <body>
   <%
@@ -24,10 +24,6 @@
     else{
         System.out.print("Connection Succesful");
     }
-    
-
-
-
   %>
   </body>
 </html>
