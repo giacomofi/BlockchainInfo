@@ -11,7 +11,7 @@ public class ConnectionManager
     {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/opreturn","root","Cetriolodimare1?");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/opreturn?autoReconnect=true&useSSL=false","root","Cetriolodimare1?");
             return conn;
         } catch (ClassNotFoundException e) {
             e.printStackTrace();

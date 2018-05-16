@@ -1,6 +1,7 @@
 <%@page import="java.sql.Connection"%>
 <%@page import="DBconnector.ConnectionManager"%>
 <%@page import="java.sql.DriverManager"%>
+<%@page import ="Useful.Category"%>
 <%--
   Created by IntelliJ IDEA.
   User: giaco
@@ -16,14 +17,11 @@
   </head>
   <body>
   <%
-    ConnectionManager db = new ConnectionManager();
-    Connection conn  = db.getConnection();
-    if(conn == null){
-        System.out.print("Connection failed");
-    }
-    else{
-        System.out.print("Connection Succesful");
-    }
+      Category c = new Category();
+
+      c.addCategories();
+
+      c.returnCategories();
   %>
   </body>
 </html>

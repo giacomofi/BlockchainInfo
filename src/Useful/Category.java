@@ -2,6 +2,7 @@ package Useful;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.HashMap;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -18,7 +19,7 @@ import DBconnector.ConnectionManager;
 public class Category {
 
     private ConnectionManager db = new ConnectionManager();
-    private static List<String> categories = new ArrayList<>();
+    private static HashMap<String,String> categories = new HashMap<>();
 
     public Category(){
 
@@ -35,7 +36,7 @@ public class Category {
              conn = db.getConnection();
              stmnt = conn.createStatement();
 
-            String query = "SELECT DISTINCT protocol from oprerturn.opreturnoutput";
+            String query = "SELECT DISTINCT protocol from opreturn.opreturnoutput";
             ResultSet rs = stmnt.executeQuery(query);
 
 
@@ -46,35 +47,35 @@ public class Category {
                 switch(protocolDummy){
 
                     case "unknown":
-                        categories.add("Unknown");
+                        categories.put(protocolDummy,"Unknown");
                         break;
 
                     case "empty":
-                        categories.add("Empty");
+                        categories.put(protocolDummy,"Empty");
                         break;
 
                     case "proofofexistence":
-                        categories.add("Notary");
+                        categories.put(protocolDummy,"Notary");
                         break;
 
                     case "openassets":
-                        categories.add("Financial");
+                        categories.put(protocolDummy,"Financial");
                         break;
 
                     case "counterparty":
-                        categories.add("Financial");
+                        categories.put(protocolDummy,"Financial");
                         break;
 
                     case "coinspark":
-                        categories.add("Financial");
+                        categories.put(protocolDummy,"Financial");
                         break;
 
                     case "cryptocopyright":
-                        categories.add("Notary");
+                        categories.put(protocolDummy,"Notary");
                         break;
 
                     case "blocksign":
-                        categories.add("Notary");
+                        categories.put(protocolDummy,"Notary");
                         break;
 
                 }
@@ -103,9 +104,13 @@ public class Category {
     }
 
 
-    public List<String> returnCategories(){
+    public void returnCategories(){
 
-        return categories;
+        for(String  s : categories.keySet()){
+            System.out.print(categories.get(s));
+            System.out.print(" " + s);
+            System.out.println("");
+        }
 
     }
 }
