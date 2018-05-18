@@ -1,7 +1,5 @@
 package Useful;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.HashMap;
 
 import java.io.IOException;
@@ -23,6 +21,8 @@ public class Category {
     private static HashMap<String,String> categories = new HashMap<>();
     private static HashMap<String,Integer> elementsPerProtocol = new HashMap<>();
     private static HashMap<String,Timestamp> firstAppearences = new HashMap<>();
+    private static HashMap<String,String> protocolMetadata = new HashMap<>();
+    private static HashMap<String,String> protocolEmbeddingMethods = new HashMap<>();
 
     public Category(){
 
@@ -81,6 +81,9 @@ public class Category {
                             firstAppearences.put(protocolDummy,dateDummy);
                         }
                         categories.put(protocolDummy,"Unknown");
+                        protocolMetadata.put(protocolDummy,"???");
+                        protocolEmbeddingMethods.put(protocolDummy,"???");
+
                         break;
 
                     case "empty":
@@ -95,6 +98,8 @@ public class Category {
                             firstAppearences.put(protocolDummy,dateDummy);
                         }
                         categories.put(protocolDummy,"Empty");
+                        protocolMetadata.put(protocolDummy,"--");
+                        protocolEmbeddingMethods.put(protocolDummy,"OP_RETURN");
                         break;
 
                     case "proofofexistence":
@@ -109,6 +114,8 @@ public class Category {
                             firstAppearences.put(protocolDummy,dateDummy);
                         }
                         categories.put(protocolDummy,"Notary");
+                        protocolMetadata.put(protocolDummy,"Hash");
+                        protocolEmbeddingMethods.put(protocolDummy,"OP_RETURN");
                         break;
 
                     case "openassets":
@@ -123,6 +130,8 @@ public class Category {
                             firstAppearences.put(protocolDummy,dateDummy);
                         }
                         categories.put(protocolDummy,"Financial");
+                        protocolMetadata.put(protocolDummy,"Financial Record");
+                        protocolEmbeddingMethods.put(protocolDummy,"OP_RETURN");
                         break;
 
                     case "counterparty":
@@ -137,6 +146,8 @@ public class Category {
                             firstAppearences.put(protocolDummy,dateDummy);
                         }
                         categories.put(protocolDummy,"Financial");
+                        protocolMetadata.put(protocolDummy,"Financial Record");
+                        protocolEmbeddingMethods.put(protocolDummy,"P2PKH / MULTISIG");
                         break;
 
                     case "coinspark":
@@ -151,6 +162,8 @@ public class Category {
                             firstAppearences.put(protocolDummy,dateDummy);
                         }
                         categories.put(protocolDummy,"Financial");
+                        protocolMetadata.put(protocolDummy,"Financial Record");
+                        protocolEmbeddingMethods.put(protocolDummy,"OP_RETURN");
                         break;
 
                     case "cryptocopyright":
@@ -165,6 +178,8 @@ public class Category {
                             firstAppearences.put(protocolDummy,dateDummy);
                         }
                         categories.put(protocolDummy,"Notary");
+                        protocolMetadata.put(protocolDummy,"Hash");
+                        protocolEmbeddingMethods.put(protocolDummy,"OP_RETURN");
                         break;
 
                     case "blocksign":
@@ -179,6 +194,8 @@ public class Category {
                             firstAppearences.put(protocolDummy,dateDummy);
                         }
                         categories.put(protocolDummy,"Notary");
+                        protocolMetadata.put(protocolDummy,"Hash");
+                        protocolEmbeddingMethods.put(protocolDummy,"OP_RETURN");
                         break;
 
                 }
@@ -218,32 +235,49 @@ public class Category {
 
     public void returnCategories(){
 
-        for(String  s : categories.keySet()){
-            System.out.print(categories.get(s));
-            System.out.print(" " + s);
+        categories.forEach((k,v)->{
+            System.out.print(k);
+            System.out.print(" " + v);
             System.out.println("");
-        }
-
+        });
     }
 
     public void returnFirstAppearences(){
 
-        for(String s : firstAppearences.keySet()){
-            System.out.print(firstAppearences.get(s));
-            System.out.print(" " + s);
+        firstAppearences.forEach((k,v)->{
+            System.out.print(k);
+            System.out.print(" " + v);
             System.out.println("");
-        }
+        });
     }
 
-    public void returnelementsPerProtocol(){
+    public void returnElementsPerProtocol(){
 
-        for(String s : elementsPerProtocol.keySet()){
-            System.out.print(elementsPerProtocol.get(s));
-            System.out.print(" " + s);
+        elementsPerProtocol.forEach((k,v)->{
+            System.out.print(k);
+            System.out.print(" " + v);
             System.out.println("");
-        }
+        });
+    }
+
+    public void returnProtocolMetadata(){
+
+        protocolMetadata.forEach((k,v)->{
+            System.out.print(k);
+            System.out.print(" " + v);
+            System.out.println("");
+        });
+
+    }
 
 
+    public void returnProtocolEmbeddingMethods(){
+
+        protocolEmbeddingMethods.forEach((k,v)->{
+            System.out.print(k);
+            System.out.print(" " + v);
+            System.out.println("");
+        });
     }
 
 

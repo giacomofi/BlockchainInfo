@@ -23,9 +23,13 @@
 
       c.returnCategories();
 
-      c.returnelementsPerProtocol();
+      c.returnElementsPerProtocol();
 
       c.returnFirstAppearences();
+
+      c.returnProtocolMetadata();
+
+      c.returnProtocolEmbeddingMethods();
 
 
   %>
