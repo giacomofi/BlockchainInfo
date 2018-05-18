@@ -22,6 +22,12 @@
       c.addCategories();
 
       c.returnCategories();
+
+      c.returnelementsPerProtocol();
+
+      c.returnFirstAppearences();
+
+
   %>
   </body>
 </html>
