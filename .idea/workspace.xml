@@ -6,9 +6,12 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f0da966-98df-4e12-9ed9-7c9143722b7f" name="Default" comment="">
+    <list default="true" id="4f0da966-98df-4e12-9ed9-7c9143722b7f" name="Default" comment="Modificata la classe categoria: analisi e raccolta delle prima apparizioni dei protocolli e degli elementi totali per singolo protocollo&#10;Probabilmente verrà cambiato nome alla classe, poichè ora l' idea è di far svolgere tutto il lavoro di creazione della tabella a questa classe (metadata, embedding method , ecc.). &#10;Aggiunti metadata e embedding method">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Servlets/OpreturnDataTable.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/OpreturnDataTable.jsp" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/Useful/Category.java" afterPath="$PROJECT_DIR$/src/Useful/Category.java" />
+      <change beforePath="$PROJECT_DIR$/src/Servlets/OpreturnDataServlet.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -36,7 +39,7 @@
       <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
+            <state relative-caret-position="510">
               <caret line="31" column="41" lean-forward="false" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
               <folding />
             </state>
@@ -46,7 +49,7 @@
       <file leaf-file-name="ConnectionManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DBconnector/ConnectionManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
+            <state relative-caret-position="204">
               <caret line="13" column="127" lean-forward="false" selection-start-line="13" selection-start-column="127" selection-end-line="13" selection-end-column="127" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -55,55 +58,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OpreturnDataServlet.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Servlets/OpreturnDataServlet.java">
+      <file leaf-file-name="OpreturnDataTable.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Servlets/OpreturnDataTable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="61" column="41" lean-forward="false" selection-start-line="61" selection-start-column="41" selection-end-line="61" selection-end-column="41" />
+            <state relative-caret-position="170">
+              <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1526394535922" expanded="true" signature="1522:1605" ph="SELECT DISTI... " />
+                <marker date="1526912979365" expanded="true" signature="1896:1949" ph="SELECT DISTI... opreturnoutput" />
+                <marker date="1526912979365" expanded="true" signature="2546:2624" ph="SELECT COUNT... opreturnoutput" />
+                <marker date="1526912979365" expanded="true" signature="2546:2633" ph="SELECT COUNT... opreturnoutput" />
+                <marker date="1526912979365" expanded="true" signature="2912:2943" ph="SELECT MIN(t... OPRETURN" />
+                <marker date="1526912979365" expanded="true" signature="2912:2993" ph="SELECT MIN(t... opreturnoutput" />
+                <marker date="1526912979365" expanded="true" signature="3539:3624" ph="SELECT COUNT... opreturnoutput" />
+                <marker date="1526912979365" expanded="true" signature="3905:3984" ph="SELECT MIN(t... opreturnoutput" />
+                <marker date="1526912979365" expanded="true" signature="4543:4639" ph="SELECT COUNT... opreturnoutput" />
+                <marker date="1526912979365" expanded="true" signature="4920:5010" ph="SELECT MIN(t... opreturnoutput" />
+                <marker date="1526912979365" expanded="true" signature="5566:5656" ph="SELECT COUNT... opreturnoutput" />
+                <marker date="1526912979365" expanded="true" signature="5937:6021" ph="SELECT MIN(t... opreturnoutput" />
+                <marker date="1526912979365" expanded="true" signature="6594:6686" ph="SELECT COUNT... opreturnoutput" />
+                <marker date="1526912979365" expanded="true" signature="6967:7053" ph="SELECT MIN(t... opreturnoutput" />
+                <marker date="1526912979365" expanded="true" signature="7630:7719" ph="SELECT COUNT... opreturnoutput" />
+                <marker date="1526912979365" expanded="true" signature="8000:8083" ph="SELECT MIN(t... opreturnoutput" />
+                <marker date="1526912979365" expanded="true" signature="8659:8754" ph="SELECT COUNT... opreturnoutput" />
+                <marker date="1526912979365" expanded="true" signature="9035:9124" ph="SELECT MIN(t... opreturnoutput" />
+                <marker date="1526912979365" expanded="true" signature="9679:9768" ph="SELECT COUNT... opreturnoutput" />
+                <marker date="1526912979365" expanded="true" signature="10049:10132" ph="SELECT MIN(t... opreturnoutput" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Category.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Useful/Category.java">
+      <file leaf-file-name="OpreturnDataTable.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/OpreturnDataTable.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1526657342053" expanded="true" signature="1321:1374" ph="SELECT DISTI... opreturnoutput" />
-                <marker date="1526657342053" expanded="true" signature="1971:2049" ph="SELECT COUNT... opreturnoutput" />
-                <marker date="1526657342053" expanded="true" signature="1971:2058" ph="SELECT COUNT... opreturnoutput" />
-                <marker date="1526657342053" expanded="true" signature="2337:2368" ph="SELECT MIN(t... OPRETURN" />
-                <marker date="1526657342053" expanded="true" signature="2337:2418" ph="SELECT MIN(t... opreturnoutput" />
-                <marker date="1526657342053" expanded="true" signature="2964:3049" ph="SELECT COUNT... opreturnoutput" />
-                <marker date="1526657342053" expanded="true" signature="3330:3409" ph="SELECT MIN(t... opreturnoutput" />
-                <marker date="1526657342053" expanded="true" signature="3968:4064" ph="SELECT COUNT... opreturnoutput" />
-                <marker date="1526657342053" expanded="true" signature="4345:4435" ph="SELECT MIN(t... opreturnoutput" />
-                <marker date="1526657342053" expanded="true" signature="4991:5081" ph="SELECT COUNT... opreturnoutput" />
-                <marker date="1526657342053" expanded="true" signature="5362:5446" ph="SELECT MIN(t... opreturnoutput" />
-                <marker date="1526657342053" expanded="true" signature="6019:6111" ph="SELECT COUNT... opreturnoutput" />
-                <marker date="1526657342053" expanded="true" signature="6392:6478" ph="SELECT MIN(t... opreturnoutput" />
-                <marker date="1526657342053" expanded="true" signature="7055:7144" ph="SELECT COUNT... opreturnoutput" />
-                <marker date="1526657342053" expanded="true" signature="7425:7508" ph="SELECT MIN(t... opreturnoutput" />
-                <marker date="1526657342053" expanded="true" signature="8084:8179" ph="SELECT COUNT... opreturnoutput" />
-                <marker date="1526657342053" expanded="true" signature="8460:8549" ph="SELECT MIN(t... opreturnoutput" />
-                <marker date="1526657342053" expanded="true" signature="9104:9193" ph="SELECT COUNT... opreturnoutput" />
-                <marker date="1526657342053" expanded="true" signature="9474:9557" ph="SELECT MIN(t... opreturnoutput" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="charts.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/Blockchain Info/charts.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="276" column="10" lean-forward="false" selection-start-line="276" selection-start-column="10" selection-end-line="276" selection-end-column="10" />
+            <state relative-caret-position="221">
+              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -115,6 +104,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Jsp File" />
         <option value="Class" />
       </list>
     </option>
@@ -161,8 +151,12 @@
         <option value="$PROJECT_DIR$/src/Servlets/OpreturnDataServlet.java" />
         <option value="$PROJECT_DIR$/src/DBconnector/ConnectionManager.java" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/src/Useful/Category.java" />
         <option value="$PROJECT_DIR$/web/Blockchain Info/charts.html" />
+        <option value="$PROJECT_DIR$/web/OpreturnDataTable.jsp" />
+        <option value="$PROJECT_DIR$/src/Servlets/OpReturnDataTableServlet.java" />
+        <option value="$PROJECT_DIR$/src/Useful/Category.java" />
+        <option value="$PROJECT_DIR$/src/Useful/OpreturnDataTable.java" />
+        <option value="$PROJECT_DIR$/src/Servlets/OpreturnDataTable.java" />
       </list>
     </option>
   </component>
@@ -207,9 +201,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
-      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -225,13 +219,19 @@
             <path>
               <item name="Blockchain Info" type="b2602c69:ProjectViewProjectNode" />
               <item name="Blockchain Info" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="DBconnector" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blockchain Info" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blockchain Info" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Servlets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Blockchain Info" type="b2602c69:ProjectViewProjectNode" />
               <item name="Blockchain Info" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="Blockchain Info" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Blockchain Info" type="b2602c69:ProjectViewProjectNode" />
@@ -241,7 +241,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -701,7 +701,9 @@
       <workItem from="1526547461656" duration="4474000" />
       <workItem from="1526562966428" duration="192000" />
       <workItem from="1526630236963" duration="14611000" />
-      <workItem from="1526658629214" duration="714000" />
+      <workItem from="1526658629214" duration="2629000" />
+      <workItem from="1526825382300" duration="1180000" />
+      <workItem from="1526910850264" duration="2029000" />
     </task>
     <task id="LOCAL-00001" summary="Risolti problemi con il Server Apache -- Ora si connette correttamente al DB MySQL &#10;Creata Servlet per l' inserimento dei dati nella tabella (per ora solo di prova)&#10;Mascherate altre pagine e componenti del sito inutili&#10;Inizio creazione classe che dato il protocollo ne restituisce la categoria (Dovrò vedere se usare un HashSet o lasciare una Generic List)">
       <created>1526466383622</created>
@@ -724,15 +726,21 @@
       <option name="project" value="LOCAL" />
       <updated>1526652454211</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Modificata la classe categoria: analisi e raccolta delle prima apparizioni dei protocolli e degli elementi totali per singolo protocollo&#10;Probabilmente verrà cambiato nome alla classe, poichè ora l' idea è di far svolgere tutto il lavoro di creazione della tabella a questa classe (metadata, embedding method , ecc.). &#10;Aggiunti metadata e embedding method">
+      <created>1526659815195</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1526659815195</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114786000" />
+    <option name="totallyTimeSpent" value="119910000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -748,7 +756,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20574887" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2118003" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="7.320644E-4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -811,27 +819,14 @@
     <MESSAGE value="Risolti problemi con il Server Apache -- Ora si connette correttamente al DB MySQL &#10;Creata Servlet per l' inserimento dei dati nella tabella (per ora solo di prova)&#10;Mascherate altre pagine e componenti del sito inutili&#10;Inizio creazione classe che dato il protocollo ne restituisce la categoria (Dovrò vedere se usare un HashSet o lasciare una Generic List)" />
     <MESSAGE value="Modificata la casse Categoria. Ora le categorie vengono raccolte in una HashMap, a cui vi è associato il protocollo. Fatta una piccola modifica per la quale ora l' accesso SSL è più sicuro. Si valuta la possibilità di usare prepared statement in modo tale da prevenire sql injection." />
     <MESSAGE value="Modificata la classe categoria: analisi e raccolta delle prima apparizioni dei protocolli e degli elementi totali per singolo protocollo&#10;Probabilmene verrà cambiato nome alla classe, poichè ora l' idea è di far svolgere tutto il lavoro di creazione della tabella a questa classe (metadata, embedding method , ecc.)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modificata la classe categoria: analisi e raccolta delle prima apparizioni dei protocolli e degli elementi totali per singolo protocollo&#10;Probabilmene verrà cambiato nome alla classe, poichè ora l' idea è di far svolgere tutto il lavoro di creazione della tabella a questa classe (metadata, embedding method , ecc.)" />
+    <MESSAGE value="Modificata la classe categoria: analisi e raccolta delle prima apparizioni dei protocolli e degli elementi totali per singolo protocollo&#10;Probabilmente verrà cambiato nome alla classe, poichè ora l' idea è di far svolgere tutto il lavoro di creazione della tabella a questa classe (metadata, embedding method , ecc.). &#10;Aggiunti metadata e embedding method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modificata la classe categoria: analisi e raccolta delle prima apparizioni dei protocolli e degli elementi totali per singolo protocollo&#10;Probabilmente verrà cambiato nome alla classe, poichè ora l' idea è di far svolgere tutto il lavoro di creazione della tabella a questa classe (metadata, embedding method , ecc.). &#10;Aggiunti metadata e embedding method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/Blockchain Info/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/Blockchain Info/navbar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="58" lean-forward="false" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/Blockchain Info/register.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1106,56 +1101,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DBconnector/ConnectionManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" column="127" lean-forward="false" selection-start-line="13" selection-start-column="127" selection-end-line="13" selection-end-column="127" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Useful/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1526657342053" expanded="true" signature="1321:1374" ph="SELECT DISTI... opreturnoutput" />
-            <marker date="1526657342053" expanded="true" signature="1971:2049" ph="SELECT COUNT... opreturnoutput" />
-            <marker date="1526657342053" expanded="true" signature="1971:2058" ph="SELECT COUNT... opreturnoutput" />
-            <marker date="1526657342053" expanded="true" signature="2337:2368" ph="SELECT MIN(t... OPRETURN" />
-            <marker date="1526657342053" expanded="true" signature="2337:2418" ph="SELECT MIN(t... opreturnoutput" />
-            <marker date="1526657342053" expanded="true" signature="2964:3049" ph="SELECT COUNT... opreturnoutput" />
-            <marker date="1526657342053" expanded="true" signature="3330:3409" ph="SELECT MIN(t... opreturnoutput" />
-            <marker date="1526657342053" expanded="true" signature="3968:4064" ph="SELECT COUNT... opreturnoutput" />
-            <marker date="1526657342053" expanded="true" signature="4345:4435" ph="SELECT MIN(t... opreturnoutput" />
-            <marker date="1526657342053" expanded="true" signature="4991:5081" ph="SELECT COUNT... opreturnoutput" />
-            <marker date="1526657342053" expanded="true" signature="5362:5446" ph="SELECT MIN(t... opreturnoutput" />
-            <marker date="1526657342053" expanded="true" signature="6019:6111" ph="SELECT COUNT... opreturnoutput" />
-            <marker date="1526657342053" expanded="true" signature="6392:6478" ph="SELECT MIN(t... opreturnoutput" />
-            <marker date="1526657342053" expanded="true" signature="7055:7144" ph="SELECT COUNT... opreturnoutput" />
-            <marker date="1526657342053" expanded="true" signature="7425:7508" ph="SELECT MIN(t... opreturnoutput" />
-            <marker date="1526657342053" expanded="true" signature="8084:8179" ph="SELECT COUNT... opreturnoutput" />
-            <marker date="1526657342053" expanded="true" signature="8460:8549" ph="SELECT MIN(t... opreturnoutput" />
-            <marker date="1526657342053" expanded="true" signature="9104:9193" ph="SELECT COUNT... opreturnoutput" />
-            <marker date="1526657342053" expanded="true" signature="9474:9557" ph="SELECT MIN(t... opreturnoutput" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/Blockchain Info/charts.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
+        <state relative-caret-position="4692">
           <caret line="276" column="10" lean-forward="false" selection-start-line="276" selection-start-column="10" selection-end-line="276" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Servlets/OpReturnDataTableServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/OpreturnDataTable.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="510">
           <caret line="31" column="41" lean-forward="false" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
           <folding />
         </state>
@@ -1163,11 +1135,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Servlets/OpreturnDataServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="61" column="41" lean-forward="false" selection-start-line="61" selection-start-column="41" selection-end-line="61" selection-end-column="41" />
+        <state relative-caret-position="-136">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DBconnector/ConnectionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="13" column="127" lean-forward="false" selection-start-line="13" selection-start-column="127" selection-end-line="13" selection-end-column="127" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1526394535922" expanded="true" signature="1522:1605" ph="SELECT DISTI... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Servlets/OpreturnDataTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding>
+            <marker date="1526912979365" expanded="true" signature="1896:1949" ph="SELECT DISTI... opreturnoutput" />
+            <marker date="1526912979365" expanded="true" signature="2546:2624" ph="SELECT COUNT... opreturnoutput" />
+            <marker date="1526912979365" expanded="true" signature="2546:2633" ph="SELECT COUNT... opreturnoutput" />
+            <marker date="1526912979365" expanded="true" signature="2912:2943" ph="SELECT MIN(t... OPRETURN" />
+            <marker date="1526912979365" expanded="true" signature="2912:2993" ph="SELECT MIN(t... opreturnoutput" />
+            <marker date="1526912979365" expanded="true" signature="3539:3624" ph="SELECT COUNT... opreturnoutput" />
+            <marker date="1526912979365" expanded="true" signature="3905:3984" ph="SELECT MIN(t... opreturnoutput" />
+            <marker date="1526912979365" expanded="true" signature="4543:4639" ph="SELECT COUNT... opreturnoutput" />
+            <marker date="1526912979365" expanded="true" signature="4920:5010" ph="SELECT MIN(t... opreturnoutput" />
+            <marker date="1526912979365" expanded="true" signature="5566:5656" ph="SELECT COUNT... opreturnoutput" />
+            <marker date="1526912979365" expanded="true" signature="5937:6021" ph="SELECT MIN(t... opreturnoutput" />
+            <marker date="1526912979365" expanded="true" signature="6594:6686" ph="SELECT COUNT... opreturnoutput" />
+            <marker date="1526912979365" expanded="true" signature="6967:7053" ph="SELECT MIN(t... opreturnoutput" />
+            <marker date="1526912979365" expanded="true" signature="7630:7719" ph="SELECT COUNT... opreturnoutput" />
+            <marker date="1526912979365" expanded="true" signature="8000:8083" ph="SELECT MIN(t... opreturnoutput" />
+            <marker date="1526912979365" expanded="true" signature="8659:8754" ph="SELECT COUNT... opreturnoutput" />
+            <marker date="1526912979365" expanded="true" signature="9035:9124" ph="SELECT MIN(t... opreturnoutput" />
+            <marker date="1526912979365" expanded="true" signature="9679:9768" ph="SELECT COUNT... opreturnoutput" />
+            <marker date="1526912979365" expanded="true" signature="10049:10132" ph="SELECT MIN(t... opreturnoutput" />
           </folding>
         </state>
       </provider>

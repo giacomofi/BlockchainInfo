@@ -1,7 +1,7 @@
 <%@page import="java.sql.Connection"%>
 <%@page import="DBconnector.ConnectionManager"%>
 <%@page import="java.sql.DriverManager"%>
-<%@page import ="Useful.Category"%>
+<%@page import ="Servlets.OpreturnDataTable"%>
 <%--
   Created by IntelliJ IDEA.
   User: giaco
@@ -17,7 +17,7 @@
   </head>
   <body>
   <%
-      Category c = new Category();
+      OpreturnDataTable c = new OpreturnDataTable();
 
       c.addCategories();
 
