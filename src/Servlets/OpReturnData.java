@@ -8,9 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.ArrayList;
+import java.util.*;
 
 import java.io.IOException;
 
@@ -258,7 +256,10 @@ public class OpReturnData extends HttpServlet {
 
     public void returnCategories(){
 
-        categories.forEach((k,v)->{
+        TreeMap <String,String> orderedCategories = new TreeMap<>(categories);
+
+
+        orderedCategories.forEach((k,v)->{
             System.out.print(k);
             System.out.print(" " + v);
             System.out.println("");
@@ -267,7 +268,9 @@ public class OpReturnData extends HttpServlet {
 
     public void returnFirstAppearences(){
 
-        firstAppearences.forEach((k,v)->{
+        TreeMap <String,Timestamp> orderedFirstAppearences = new TreeMap<>(firstAppearences);
+
+        orderedFirstAppearences.forEach((k,v)->{
             System.out.print(k);
             System.out.print(" " + v);
             System.out.println("");
@@ -276,7 +279,9 @@ public class OpReturnData extends HttpServlet {
 
     public void returnElementsPerProtocol(){
 
-        elementsPerProtocol.forEach((k,v)->{
+        TreeMap <String,Integer> orderedElementsPerProtocol = new TreeMap<>(elementsPerProtocol);
+
+        orderedElementsPerProtocol.forEach((k,v)->{
             System.out.print(k);
             System.out.print(" " + v);
             System.out.println("");
@@ -285,7 +290,9 @@ public class OpReturnData extends HttpServlet {
 
     public void returnProtocolMetadata(){
 
-        protocolMetadata.forEach((k,v)->{
+        TreeMap <String,String> orderedProtocolMetadata = new TreeMap<>(protocolMetadata);
+
+        orderedProtocolMetadata.forEach((k,v)->{
             System.out.print(k);
             System.out.print(" " + v);
             System.out.println("");
@@ -296,7 +303,9 @@ public class OpReturnData extends HttpServlet {
 
     public void returnProtocolEmbeddingMethods(){
 
-        protocolEmbeddingMethods.forEach((k,v)->{
+        TreeMap <String,String> orderedProtocolEmbeddingMethods = new TreeMap<>(protocolEmbeddingMethods);
+
+        orderedProtocolEmbeddingMethods.forEach((k,v)->{
             System.out.print(k);
             System.out.print(" " + v);
             System.out.println("");

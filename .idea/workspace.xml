@@ -7,12 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f0da966-98df-4e12-9ed9-7c9143722b7f" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Servlets/OpReturnData.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/Servlets/OpreturnDataTable.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Useful/Category.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/OpreturnDataTable.jsp" afterPath="$PROJECT_DIR$/web/OpreturnDataTable.jsp" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/Servlets/OpReturnData.java" afterPath="$PROJECT_DIR$/src/Servlets/OpReturnData.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,10 +32,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
+            <state relative-caret-position="493">
               <caret line="29" column="33" lean-forward="true" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
               <folding />
             </state>
@@ -49,7 +45,7 @@
       <file leaf-file-name="ConnectionManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DBconnector/ConnectionManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
+            <state relative-caret-position="153">
               <caret line="9" column="37" lean-forward="true" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -58,30 +54,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OpReturnData.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="OpReturnData.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Servlets/OpReturnData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="46" column="47" lean-forward="false" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
+            <state relative-caret-position="839">
+              <caret line="305" column="57" lean-forward="true" selection-start-line="305" selection-start-column="57" selection-end-line="305" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1526982000181" expanded="true" signature="2111:2164" ph="SELECT DISTI... opreturnoutput" />
-                <marker date="1526982000181" expanded="true" signature="2760:2847" ph="SELECT COUNT... opreturnoutput" />
-                <marker date="1526982000181" expanded="true" signature="3126:3207" ph="SELECT MIN(t... opreturnoutput" />
-                <marker date="1526982000181" expanded="true" signature="3753:3838" ph="SELECT COUNT... opreturnoutput" />
-                <marker date="1526982000181" expanded="true" signature="4119:4198" ph="SELECT MIN(t... opreturnoutput" />
-                <marker date="1526982000181" expanded="true" signature="4757:4853" ph="SELECT COUNT... opreturnoutput" />
-                <marker date="1526982000181" expanded="true" signature="5134:5224" ph="SELECT MIN(t... opreturnoutput" />
-                <marker date="1526982000181" expanded="true" signature="5780:5870" ph="SELECT COUNT... opreturnoutput" />
-                <marker date="1526982000181" expanded="true" signature="6151:6235" ph="SELECT MIN(t... opreturnoutput" />
-                <marker date="1526982000181" expanded="true" signature="6808:6900" ph="SELECT COUNT... opreturnoutput" />
-                <marker date="1526982000181" expanded="true" signature="7181:7267" ph="SELECT MIN(t... opreturnoutput" />
-                <marker date="1526982000181" expanded="true" signature="7844:7933" ph="SELECT COUNT... opreturnoutput" />
-                <marker date="1526982000181" expanded="true" signature="8214:8297" ph="SELECT MIN(t... opreturnoutput" />
-                <marker date="1526982000181" expanded="true" signature="8873:8968" ph="SELECT COUNT... opreturnoutput" />
-                <marker date="1526982000181" expanded="true" signature="9249:9338" ph="SELECT MIN(t... opreturnoutput" />
-                <marker date="1526982000181" expanded="true" signature="9893:9982" ph="SELECT COUNT... opreturnoutput" />
-                <marker date="1526982000181" expanded="true" signature="10263:10346" ph="SELECT MIN(t... opreturnoutput" />
+                <marker date="1526983575505" expanded="true" signature="2054:2107" ph="SELECT DISTI... opreturnoutput" />
+                <marker date="1526983575505" expanded="true" signature="2703:2790" ph="SELECT COUNT... opreturnoutput" />
+                <marker date="1526983575505" expanded="true" signature="3069:3150" ph="SELECT MIN(t... opreturnoutput" />
+                <marker date="1526983575505" expanded="true" signature="3696:3781" ph="SELECT COUNT... opreturnoutput" />
+                <marker date="1526983575505" expanded="true" signature="4062:4141" ph="SELECT MIN(t... opreturnoutput" />
+                <marker date="1526983575505" expanded="true" signature="4700:4796" ph="SELECT COUNT... opreturnoutput" />
+                <marker date="1526983575505" expanded="true" signature="5077:5167" ph="SELECT MIN(t... opreturnoutput" />
+                <marker date="1526983575505" expanded="true" signature="5723:5813" ph="SELECT COUNT... opreturnoutput" />
+                <marker date="1526983575505" expanded="true" signature="6094:6178" ph="SELECT MIN(t... opreturnoutput" />
+                <marker date="1526983575505" expanded="true" signature="6751:6843" ph="SELECT COUNT... opreturnoutput" />
+                <marker date="1526983575505" expanded="true" signature="7124:7210" ph="SELECT MIN(t... opreturnoutput" />
+                <marker date="1526983575505" expanded="true" signature="7787:7876" ph="SELECT COUNT... opreturnoutput" />
+                <marker date="1526983575505" expanded="true" signature="8157:8240" ph="SELECT MIN(t... opreturnoutput" />
+                <marker date="1526983575505" expanded="true" signature="8816:8911" ph="SELECT COUNT... opreturnoutput" />
+                <marker date="1526983575505" expanded="true" signature="9192:9281" ph="SELECT MIN(t... opreturnoutput" />
+                <marker date="1526983575505" expanded="true" signature="9836:9925" ph="SELECT COUNT... opreturnoutput" />
+                <marker date="1526983575505" expanded="true" signature="10206:10289" ph="SELECT MIN(t... opreturnoutput" />
               </folding>
             </state>
           </provider>
@@ -90,7 +86,7 @@
       <file leaf-file-name="OpreturnDataTable.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/OpreturnDataTable.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1649">
+            <state relative-caret-position="1598">
               <caret line="118" column="49" lean-forward="true" selection-start-line="118" selection-start-column="49" selection-end-line="118" selection-end-column="49" />
               <folding />
             </state>
@@ -169,8 +165,8 @@
         <option value="$PROJECT_DIR$/web/OpreturnDataTable.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.fxml" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.tld" />
-        <option value="$PROJECT_DIR$/src/Servlets/OpReturnData.java" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/src/Servlets/OpReturnData.java" />
       </list>
     </option>
   </component>
@@ -712,7 +708,7 @@
       <workItem from="1526658629214" duration="2629000" />
       <workItem from="1526825382300" duration="1180000" />
       <workItem from="1526910850264" duration="4503000" />
-      <workItem from="1526979599981" duration="2084000" />
+      <workItem from="1526979599981" duration="3603000" />
     </task>
     <task id="LOCAL-00001" summary="Risolti problemi con il Server Apache -- Ora si connette correttamente al DB MySQL &#10;Creata Servlet per l' inserimento dei dati nella tabella (per ora solo di prova)&#10;Mascherate altre pagine e componenti del sito inutili&#10;Inizio creazione classe che dato il protocollo ne restituisce la categoria (Dovrò vedere se usare un HashSet o lasciare una Generic List)">
       <created>1526466383622</created>
@@ -749,14 +745,22 @@
       <option name="project" value="LOCAL" />
       <updated>1526913064271</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Modificata la Servlet">
+      <created>1526982067128</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1526982067129</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124468000" />
+    <option name="totallyTimeSpent" value="125987000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -772,7 +776,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21482602" sideWeight="0.49346405" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21482602" sideWeight="0.49346405" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21482602" sideWeight="0.50653595" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="7.320644E-4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -837,7 +841,8 @@
     <MESSAGE value="Modificata la classe categoria: analisi e raccolta delle prima apparizioni dei protocolli e degli elementi totali per singolo protocollo&#10;Probabilmene verrà cambiato nome alla classe, poichè ora l' idea è di far svolgere tutto il lavoro di creazione della tabella a questa classe (metadata, embedding method , ecc.)" />
     <MESSAGE value="Modificata la classe categoria: analisi e raccolta delle prima apparizioni dei protocolli e degli elementi totali per singolo protocollo&#10;Probabilmente verrà cambiato nome alla classe, poichè ora l' idea è di far svolgere tutto il lavoro di creazione della tabella a questa classe (metadata, embedding method , ecc.). &#10;Aggiunti metadata e embedding method" />
     <MESSAGE value="Completata Servlet per la creazione della tabella.Il prossimo passo sarà la creazione della corrispettiva Jsp" />
-    <option name="LAST_COMMIT_MESSAGE" value="Completata Servlet per la creazione della tabella.Il prossimo passo sarà la creazione della corrispettiva Jsp" />
+    <MESSAGE value="Modificata la Servlet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modificata la Servlet" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1122,33 +1127,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Servlets/OpReturnData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="46" column="47" lean-forward="false" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1526982000181" expanded="true" signature="2111:2164" ph="SELECT DISTI... opreturnoutput" />
-            <marker date="1526982000181" expanded="true" signature="2760:2847" ph="SELECT COUNT... opreturnoutput" />
-            <marker date="1526982000181" expanded="true" signature="3126:3207" ph="SELECT MIN(t... opreturnoutput" />
-            <marker date="1526982000181" expanded="true" signature="3753:3838" ph="SELECT COUNT... opreturnoutput" />
-            <marker date="1526982000181" expanded="true" signature="4119:4198" ph="SELECT MIN(t... opreturnoutput" />
-            <marker date="1526982000181" expanded="true" signature="4757:4853" ph="SELECT COUNT... opreturnoutput" />
-            <marker date="1526982000181" expanded="true" signature="5134:5224" ph="SELECT MIN(t... opreturnoutput" />
-            <marker date="1526982000181" expanded="true" signature="5780:5870" ph="SELECT COUNT... opreturnoutput" />
-            <marker date="1526982000181" expanded="true" signature="6151:6235" ph="SELECT MIN(t... opreturnoutput" />
-            <marker date="1526982000181" expanded="true" signature="6808:6900" ph="SELECT COUNT... opreturnoutput" />
-            <marker date="1526982000181" expanded="true" signature="7181:7267" ph="SELECT MIN(t... opreturnoutput" />
-            <marker date="1526982000181" expanded="true" signature="7844:7933" ph="SELECT COUNT... opreturnoutput" />
-            <marker date="1526982000181" expanded="true" signature="8214:8297" ph="SELECT MIN(t... opreturnoutput" />
-            <marker date="1526982000181" expanded="true" signature="8873:8968" ph="SELECT COUNT... opreturnoutput" />
-            <marker date="1526982000181" expanded="true" signature="9249:9338" ph="SELECT MIN(t... opreturnoutput" />
-            <marker date="1526982000181" expanded="true" signature="9893:9982" ph="SELECT COUNT... opreturnoutput" />
-            <marker date="1526982000181" expanded="true" signature="10263:10346" ph="SELECT MIN(t... opreturnoutput" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Servlets/OpreturnDataTable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -1157,9 +1135,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="33" lean-forward="true" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/DBconnector/ConnectionManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
+        <state relative-caret-position="153">
           <caret line="9" column="37" lean-forward="true" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1169,17 +1155,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/OpreturnDataTable.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1649">
+        <state relative-caret-position="1598">
           <caret line="118" column="49" lean-forward="true" selection-start-line="118" selection-start-column="49" selection-end-line="118" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+    <entry file="file://$PROJECT_DIR$/src/Servlets/OpReturnData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="29" column="33" lean-forward="true" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
-          <folding />
+        <state relative-caret-position="839">
+          <caret line="305" column="57" lean-forward="true" selection-start-line="305" selection-start-column="57" selection-end-line="305" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1526983575505" expanded="true" signature="2054:2107" ph="SELECT DISTI... opreturnoutput" />
+            <marker date="1526983575505" expanded="true" signature="2703:2790" ph="SELECT COUNT... opreturnoutput" />
+            <marker date="1526983575505" expanded="true" signature="3069:3150" ph="SELECT MIN(t... opreturnoutput" />
+            <marker date="1526983575505" expanded="true" signature="3696:3781" ph="SELECT COUNT... opreturnoutput" />
+            <marker date="1526983575505" expanded="true" signature="4062:4141" ph="SELECT MIN(t... opreturnoutput" />
+            <marker date="1526983575505" expanded="true" signature="4700:4796" ph="SELECT COUNT... opreturnoutput" />
+            <marker date="1526983575505" expanded="true" signature="5077:5167" ph="SELECT MIN(t... opreturnoutput" />
+            <marker date="1526983575505" expanded="true" signature="5723:5813" ph="SELECT COUNT... opreturnoutput" />
+            <marker date="1526983575505" expanded="true" signature="6094:6178" ph="SELECT MIN(t... opreturnoutput" />
+            <marker date="1526983575505" expanded="true" signature="6751:6843" ph="SELECT COUNT... opreturnoutput" />
+            <marker date="1526983575505" expanded="true" signature="7124:7210" ph="SELECT MIN(t... opreturnoutput" />
+            <marker date="1526983575505" expanded="true" signature="7787:7876" ph="SELECT COUNT... opreturnoutput" />
+            <marker date="1526983575505" expanded="true" signature="8157:8240" ph="SELECT MIN(t... opreturnoutput" />
+            <marker date="1526983575505" expanded="true" signature="8816:8911" ph="SELECT COUNT... opreturnoutput" />
+            <marker date="1526983575505" expanded="true" signature="9192:9281" ph="SELECT MIN(t... opreturnoutput" />
+            <marker date="1526983575505" expanded="true" signature="9836:9925" ph="SELECT COUNT... opreturnoutput" />
+            <marker date="1526983575505" expanded="true" signature="10206:10289" ph="SELECT MIN(t... opreturnoutput" />
+          </folding>
         </state>
       </provider>
     </entry>
