@@ -1,12 +1,20 @@
-package Useful;
+package Servlets;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
 
 import java.util.HashMap;
+import java.util.List;
+import java.util.ArrayList;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+
 import java.sql.Connection;
-import java.sql.Date;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Timestamp;
 import java.sql.SQLException;
@@ -14,7 +22,9 @@ import java.sql.Statement;
 import DBconnector.ConnectionManager;
 
 
-public class Category {
+@WebServlet(name = "OpReturnData")
+public class OpReturnData extends HttpServlet {
+
 
     private ConnectionManager db = new ConnectionManager();
 
@@ -24,10 +34,23 @@ public class Category {
     private static HashMap<String,String> protocolMetadata = new HashMap<>();
     private static HashMap<String,String> protocolEmbeddingMethods = new HashMap<>();
 
-    public Category(){
+    public OpReturnData(){
 
     }
 
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        List<HashMap> allOpData = new ArrayList<>();
+        OpReturnData dummy = new OpReturnData(); //Just to inizialize HashMaps
+
+        dummy.addCategories();
+        dummy.addtoList(allOpData);
+
+        request.setAttribute("allOpData",allOpData);
+    }
 
     public void addCategories(){
 
@@ -41,15 +64,15 @@ public class Category {
 
         try{
 
-             conn = db.getConnection();
-             stmnt = conn.createStatement();
-             stmnt1 = conn.createStatement();
-             stmnt2 = conn.createStatement();
+            conn = db.getConnection();
+            stmnt = conn.createStatement();
+            stmnt1 = conn.createStatement();
+            stmnt2 = conn.createStatement();
 
-             String protocolquery = "SELECT DISTINCT protocol FROM opreturn.opreturnoutput";
+            String protocolquery = "SELECT DISTINCT protocol FROM opreturn.opreturnoutput";
 
 
-             ResultSet rs = stmnt.executeQuery(protocolquery); //Protocol Result Set
+            ResultSet rs = stmnt.executeQuery(protocolquery); //Protocol Result Set
 
 
             while(rs.next()){
@@ -280,5 +303,13 @@ public class Category {
         });
     }
 
+    public void addtoList(List<HashMap> l){
 
+        l.add(categories);
+        l.add(elementsPerProtocol);
+        l.add(firstAppearences);
+        l.add(protocolMetadata);
+        l.add(protocolEmbeddingMethods);
+
+    }
 }

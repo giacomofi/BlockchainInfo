@@ -1,7 +1,7 @@
 <%@page import="java.sql.Connection"%>
 <%@page import="DBconnector.ConnectionManager"%>
 <%@page import="java.sql.DriverManager"%>
-<%@page import ="Servlets.OpreturnDataTable"%>
+<%@page import ="Servlets.OpReturnData"%>
 <%--
   Created by IntelliJ IDEA.
   User: giaco
@@ -17,7 +17,7 @@
   </head>
   <body>
   <%
-      OpreturnDataTable c = new OpreturnDataTable();
+      OpReturnData c = new OpReturnData();
 
       c.addCategories();
 
