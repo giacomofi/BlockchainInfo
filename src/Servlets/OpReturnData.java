@@ -17,6 +17,7 @@ import java.sql.ResultSet;
 import java.sql.Timestamp;
 import java.sql.SQLException;
 import java.sql.Statement;
+
 import DBconnector.ConnectionManager;
 
 
@@ -26,11 +27,10 @@ public class OpReturnData extends HttpServlet {
 
     private ConnectionManager db = new ConnectionManager();
 
-    private static HashMap<String,String> categories = new HashMap<>();
-    private static HashMap<String,Integer> elementsPerProtocol = new HashMap<>();
-    private static HashMap<String,Timestamp> firstAppearences = new HashMap<>();
-    private static HashMap<String,String> protocolMetadata = new HashMap<>();
-    private static HashMap<String,String> protocolEmbeddingMethods = new HashMap<>();
+    private static HashMap <String,List<String>> protocolTable = new HashMap<>();
+
+
+
 
     public OpReturnData(){
 
@@ -41,13 +41,13 @@ public class OpReturnData extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<HashMap> allOpData = new ArrayList<>();
+
         OpReturnData dummy = new OpReturnData(); //Just to inizialize HashMaps
 
         dummy.addCategories();
-        dummy.addtoList(allOpData);
 
-        request.setAttribute("allOpData",allOpData);
+
+        request.setAttribute("protocolTable",protocolTable);
     }
 
     public void addCategories(){
@@ -80,6 +80,7 @@ public class OpReturnData extends HttpServlet {
                 Integer elementsDummy;
                 Timestamp dateDummy;
                 String protocolDummy = rs.getString("protocol");
+                List<String> tableData = new ArrayList<>();
 
                 //Result Sets
 
@@ -94,16 +95,18 @@ public class OpReturnData extends HttpServlet {
                         epprs = stmnt1.executeQuery("SELECT COUNT(protocol) AS count FROM opreturn.opreturnoutput WHERE protocol = 'unknown' ");
                         while(epprs.next()){
                             elementsDummy = epprs.getInt("count");
-                            elementsPerProtocol.put(protocolDummy,elementsDummy);
+                            tableData.add(elementsDummy.toString());
                         }
                         daters = stmnt2.executeQuery("SELECT MIN(txdate) AS min FROM opreturn.opreturnoutput WHERE protocol = 'unknown'");
                         while(daters.next()){
                             dateDummy = daters.getTimestamp("min");
-                            firstAppearences.put(protocolDummy,dateDummy);
+                            tableData.add(dateDummy.toString());
                         }
-                        categories.put(protocolDummy,"Unknown");
-                        protocolMetadata.put(protocolDummy,"???");
-                        protocolEmbeddingMethods.put(protocolDummy,"???");
+                        tableData.add("Unknown");
+                        tableData.add("???");
+                        tableData.add("???");
+                        protocolTable.put(protocolDummy,tableData);
+
 
                         break;
 
@@ -111,112 +114,119 @@ public class OpReturnData extends HttpServlet {
                         epprs = stmnt1.executeQuery("SELECT COUNT(protocol) AS count FROM opreturn.opreturnoutput WHERE protocol = 'empty' ");
                         while(epprs.next()) {
                             elementsDummy = epprs.getInt("count");
-                            elementsPerProtocol.put(protocolDummy, elementsDummy);
+                            tableData.add(elementsDummy.toString());
                         }
                         daters = stmnt2.executeQuery("SELECT MIN(txdate) AS min FROM opreturn.opreturnoutput WHERE protocol = 'empty'");
                         while(daters.next()){
                             dateDummy = daters.getTimestamp("min");
-                            firstAppearences.put(protocolDummy,dateDummy);
+                            tableData.add(dateDummy.toString());
                         }
-                        categories.put(protocolDummy,"Empty");
-                        protocolMetadata.put(protocolDummy,"--");
-                        protocolEmbeddingMethods.put(protocolDummy,"OP_RETURN");
+                        tableData.add("Empty");
+                        tableData.add("--");
+                        tableData.add("OP_RETURN");
+                        protocolTable.put(protocolDummy,tableData);
                         break;
 
                     case "proofofexistence":
                         epprs = stmnt1.executeQuery("SELECT COUNT(protocol) AS count FROM opreturn.opreturnoutput WHERE protocol = 'proofofexistence' ");
                         while(epprs.next()) {
                             elementsDummy = epprs.getInt("count");
-                            elementsPerProtocol.put(protocolDummy, elementsDummy);
+                            tableData.add(elementsDummy.toString());
                         }
                         daters = stmnt2.executeQuery("SELECT MIN(txdate) AS min FROM opreturn.opreturnoutput WHERE protocol = 'proofofexistence'");
                         while(daters.next()){
                             dateDummy = daters.getTimestamp("min");
-                            firstAppearences.put(protocolDummy,dateDummy);
+                            tableData.add(dateDummy.toString());
                         }
-                        categories.put(protocolDummy,"Notary");
-                        protocolMetadata.put(protocolDummy,"Hash");
-                        protocolEmbeddingMethods.put(protocolDummy,"OP_RETURN");
+                        tableData.add("Notary");
+                        tableData.add("Hash");
+                        tableData.add("OP_RETURN");
+                        protocolTable.put(protocolDummy,tableData);
                         break;
 
                     case "openassets":
                         epprs = stmnt1.executeQuery("SELECT COUNT(protocol) AS count FROM opreturn.opreturnoutput WHERE protocol = 'openassets' ");
                         while(epprs.next()) {
                             elementsDummy = epprs.getInt("count");
-                            elementsPerProtocol.put(protocolDummy, elementsDummy);
+                            tableData.add(elementsDummy.toString());
                         }
                         daters = stmnt2.executeQuery("SELECT MIN(txdate) AS min FROM opreturn.opreturnoutput WHERE protocol = 'openassets'");
                         while(daters.next()){
                             dateDummy = daters.getTimestamp("min");
-                            firstAppearences.put(protocolDummy,dateDummy);
+                            tableData.add(dateDummy.toString());
                         }
-                        categories.put(protocolDummy,"Financial");
-                        protocolMetadata.put(protocolDummy,"Financial Record");
-                        protocolEmbeddingMethods.put(protocolDummy,"OP_RETURN");
+                        tableData.add("Financial");
+                        tableData.add("Financial Record");
+                        tableData.add("OP_RETURN");
+                        protocolTable.put(protocolDummy,tableData);
                         break;
 
                     case "counterparty":
                         epprs = stmnt1.executeQuery("SELECT COUNT(protocol) AS count FROM opreturn.opreturnoutput WHERE protocol = 'counterparty' ");
                         while(epprs.next()) {
                             elementsDummy = epprs.getInt("count");
-                            elementsPerProtocol.put(protocolDummy, elementsDummy);
+                            tableData.add(elementsDummy.toString());
                         }
                         daters = stmnt2.executeQuery("SELECT MIN(txdate) AS min FROM opreturn.opreturnoutput WHERE protocol = 'counterparty'");
                         while(daters.next()){
                             dateDummy = daters.getTimestamp("min");
-                            firstAppearences.put(protocolDummy,dateDummy);
+                            tableData.add(dateDummy.toString());
                         }
-                        categories.put(protocolDummy,"Financial");
-                        protocolMetadata.put(protocolDummy,"Financial Record");
-                        protocolEmbeddingMethods.put(protocolDummy,"P2PKH / MULTISIG");
+                        tableData.add("Financial");
+                        tableData.add("Financial Record");
+                        tableData.add("P2PKH / MULTISIG");
+                        protocolTable.put(protocolDummy,tableData);
                         break;
 
                     case "coinspark":
                         epprs = stmnt1.executeQuery("SELECT COUNT(protocol) AS count FROM opreturn.opreturnoutput WHERE protocol = 'coinspark' ");
                         while(epprs.next()) {
                             elementsDummy = epprs.getInt("count");
-                            elementsPerProtocol.put(protocolDummy, elementsDummy);
+                            tableData.add(elementsDummy.toString());
                         }
                         daters = stmnt2.executeQuery("SELECT MIN(txdate) AS min FROM opreturn.opreturnoutput WHERE protocol = 'coinspark'");
                         while(daters.next()){
                             dateDummy = daters.getTimestamp("min");
-                            firstAppearences.put(protocolDummy,dateDummy);
+                            tableData.add(dateDummy.toString());
                         }
-                        categories.put(protocolDummy,"Financial");
-                        protocolMetadata.put(protocolDummy,"Financial Record");
-                        protocolEmbeddingMethods.put(protocolDummy,"OP_RETURN");
+                        tableData.add("Financial");
+                        tableData.add("Financial Record");
+                        tableData.add("OP_RETURN");
+                        protocolTable.put(protocolDummy,tableData);
                         break;
 
                     case "cryptocopyright":
                         epprs = stmnt1.executeQuery("SELECT COUNT(protocol) AS count FROM opreturn.opreturnoutput WHERE protocol = 'cryptocopyright' ");
                         while(epprs.next()) {
                             elementsDummy = epprs.getInt("count");
-                            elementsPerProtocol.put(protocolDummy, elementsDummy);
+                            tableData.add(elementsDummy.toString());
                         }
                         daters = stmnt2.executeQuery("SELECT MIN(txdate) AS min FROM opreturn.opreturnoutput WHERE protocol = 'cryptocopyright'");
                         while(daters.next()){
                             dateDummy = daters.getTimestamp("min");
-                            firstAppearences.put(protocolDummy,dateDummy);
+                            tableData.add(dateDummy.toString());
                         }
-                        categories.put(protocolDummy,"Notary");
-                        protocolMetadata.put(protocolDummy,"Hash");
-                        protocolEmbeddingMethods.put(protocolDummy,"OP_RETURN");
+                        tableData.add("Notary");
+                        tableData.add("Hash");
+                        tableData.add("OP_RETURN");
+                        protocolTable.put(protocolDummy,tableData);
                         break;
 
                     case "blocksign":
                         epprs = stmnt1.executeQuery("SELECT COUNT(protocol) AS count FROM opreturn.opreturnoutput WHERE protocol = 'blocksign' ");
                         while(epprs.next()) {
                             elementsDummy = epprs.getInt("count");
-                            elementsPerProtocol.put(protocolDummy, elementsDummy);
+                            tableData.add(elementsDummy.toString());
                         }
                         daters = stmnt2.executeQuery("SELECT MIN(txdate) AS min FROM opreturn.opreturnoutput WHERE protocol = 'blocksign'");
                         while(daters.next()){
                             dateDummy = daters.getTimestamp("min");
-                            firstAppearences.put(protocolDummy,dateDummy);
+                            tableData.add(dateDummy.toString());
                         }
-                        categories.put(protocolDummy,"Notary");
-                        protocolMetadata.put(protocolDummy,"Hash");
-                        protocolEmbeddingMethods.put(protocolDummy,"OP_RETURN");
+                        tableData.add("Notary");
+                        tableData.add("Hash");
+                        tableData.add("OP_RETURN");
+                        protocolTable.put(protocolDummy,tableData);
                         break;
 
                 }
@@ -254,71 +264,18 @@ public class OpReturnData extends HttpServlet {
     }
 
 
-    public void returnCategories(){
+    public void printAll(){
 
-        TreeMap <String,String> orderedCategories = new TreeMap<>(categories);
+        TreeMap<String,List<String>> orderedMap = new TreeMap<>(protocolTable);
 
-
-        orderedCategories.forEach((k,v)->{
-            System.out.print(k);
-            System.out.print(" " + v);
-            System.out.println("");
-        });
-    }
-
-    public void returnFirstAppearences(){
-
-        TreeMap <String,Timestamp> orderedFirstAppearences = new TreeMap<>(firstAppearences);
-
-        orderedFirstAppearences.forEach((k,v)->{
-            System.out.print(k);
-            System.out.print(" " + v);
-            System.out.println("");
-        });
-    }
-
-    public void returnElementsPerProtocol(){
-
-        TreeMap <String,Integer> orderedElementsPerProtocol = new TreeMap<>(elementsPerProtocol);
-
-        orderedElementsPerProtocol.forEach((k,v)->{
-            System.out.print(k);
-            System.out.print(" " + v);
-            System.out.println("");
-        });
-    }
-
-    public void returnProtocolMetadata(){
-
-        TreeMap <String,String> orderedProtocolMetadata = new TreeMap<>(protocolMetadata);
-
-        orderedProtocolMetadata.forEach((k,v)->{
-            System.out.print(k);
-            System.out.print(" " + v);
-            System.out.println("");
-        });
+        orderedMap.forEach((k,v)->{
+                    System.out.print(k);
+                    System.out.print(" " + v);
+                    System.out.println("");
+                }
+        );
 
     }
 
 
-    public void returnProtocolEmbeddingMethods(){
-
-        TreeMap <String,String> orderedProtocolEmbeddingMethods = new TreeMap<>(protocolEmbeddingMethods);
-
-        orderedProtocolEmbeddingMethods.forEach((k,v)->{
-            System.out.print(k);
-            System.out.print(" " + v);
-            System.out.println("");
-        });
-    }
-
-    public void addtoList(List<HashMap> l){
-
-        l.add(categories);
-        l.add(elementsPerProtocol);
-        l.add(firstAppearences);
-        l.add(protocolMetadata);
-        l.add(protocolEmbeddingMethods);
-
-    }
 }

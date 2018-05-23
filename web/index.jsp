@@ -17,19 +17,6 @@
   </head>
   <body>
   <%
-      OpReturnData c = new OpReturnData();
-
-      c.addCategories();
-
-      c.returnCategories();
-
-      c.returnElementsPerProtocol();
-
-      c.returnFirstAppearences();
-
-      c.returnProtocolMetadata();
-
-      c.returnProtocolEmbeddingMethods();
 
 
   %>
