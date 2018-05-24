@@ -6,10 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f0da966-98df-4e12-9ed9-7c9143722b7f" name="Default" comment="Servlet Ottimizzata">
+    <list default="true" id="4f0da966-98df-4e12-9ed9-7c9143722b7f" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Useful/Protocol.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/Servlets/OpReturnData.java" afterPath="$PROJECT_DIR$/src/Servlets/OpReturnData.java" />
-      <change beforePath="$PROJECT_DIR$/web/OpreturnDataTable.jsp" afterPath="$PROJECT_DIR$/web/OpreturnDataTable.jsp" />
       <change beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -37,8 +37,8 @@
       <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="41" lean-forward="false" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
+            <state relative-caret-position="216">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -47,27 +47,59 @@
       <file leaf-file-name="OpReturnData.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Servlets/OpReturnData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-748">
-              <caret line="49" column="58" lean-forward="false" selection-start-line="49" selection-start-column="58" selection-end-line="49" selection-end-column="58" />
+            <state relative-caret-position="134">
+              <caret line="27" column="59" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1527073813574" expanded="true" signature="1662:1715" ph="SELECT DISTI... opreturnoutput" />
-                <marker date="1527073813574" expanded="true" signature="2371:2458" ph="SELECT COUNT... opreturnoutput" />
-                <marker date="1527073813574" expanded="true" signature="2724:2805" ph="SELECT MIN(t... opreturnoutput" />
-                <marker date="1527073813574" expanded="true" signature="3345:3430" ph="SELECT COUNT... opreturnoutput" />
-                <marker date="1527073813574" expanded="true" signature="3697:3776" ph="SELECT MIN(t... opreturnoutput" />
-                <marker date="1527073813574" expanded="true" signature="4328:4424" ph="SELECT COUNT... opreturnoutput" />
-                <marker date="1527073813574" expanded="true" signature="4691:4781" ph="SELECT MIN(t... opreturnoutput" />
-                <marker date="1527073813574" expanded="true" signature="5330:5420" ph="SELECT COUNT... opreturnoutput" />
-                <marker date="1527073813574" expanded="true" signature="5687:5771" ph="SELECT MIN(t... opreturnoutput" />
-                <marker date="1527073813574" expanded="true" signature="6337:6429" ph="SELECT COUNT... opreturnoutput" />
-                <marker date="1527073813574" expanded="true" signature="6696:6782" ph="SELECT MIN(t... opreturnoutput" />
-                <marker date="1527073813574" expanded="true" signature="7352:7441" ph="SELECT COUNT... opreturnoutput" />
-                <marker date="1527073813574" expanded="true" signature="7708:7791" ph="SELECT MIN(t... opreturnoutput" />
-                <marker date="1527073813574" expanded="true" signature="8360:8455" ph="SELECT COUNT... opreturnoutput" />
-                <marker date="1527073813574" expanded="true" signature="8722:8811" ph="SELECT MIN(t... opreturnoutput" />
-                <marker date="1527073813574" expanded="true" signature="9359:9448" ph="SELECT COUNT... opreturnoutput" />
-                <marker date="1527073813574" expanded="true" signature="9715:9798" ph="SELECT MIN(t... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="1818:1871" ph="SELECT DISTI... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="2767:2928" ph="SELECT COUNT... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="3194:3349" ph="SELECT MIN(t... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="3617:3788" ph="select sum(l... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="4078:4448" ph="SELECT o.tot... sum" />
+                <marker date="1527155281460" expanded="true" signature="4166:4263" ph="select sum(l... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="4353:4445" ph="select count... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="5014:5173" ph="SELECT COUNT... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="5440:5593" ph="SELECT MIN(t... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="5861:6030" ph="select sum(l... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="6320:6686" ph="SELECT o.tot... sum" />
+                <marker date="1527155281460" expanded="true" signature="6408:6503" ph="select sum(l... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="6593:6683" ph="select count... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="7264:7434" ph="SELECT COUNT... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="7701:7865" ph="SELECT MIN(t... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="8133:8313" ph="select sum(l... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="8603:8991" ph="SELECT o.tot... sum" />
+                <marker date="1527155281460" expanded="true" signature="8691:8797" ph="select sum(l... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="8887:8988" ph="select count... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="9566:9730" ph="SELECT COUNT... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="9997:10155" ph="SELECT MIN(t... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="10423:10597" ph="select sum(l... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="10887:11263" ph="SELECT o.tot... sum" />
+                <marker date="1527155281460" expanded="true" signature="10975:11075" ph="select sum(l... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="11165:11260" ph="select count... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="11855:12021" ph="SELECT COUNT... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="12288:12448" ph="SELECT MIN(t... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="12716:12892" ph="select sum(l... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="13182:13562" ph="SELECT o.tot... sum" />
+                <marker date="1527155281460" expanded="true" signature="13270:13372" ph="select sum(l... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="13462:13559" ph="select count... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="14158:14321" ph="SELECT COUNT... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="14588:14745" ph="SELECT MIN(t... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="15013:15186" ph="select sum(l... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="15476:15850" ph="SELECT o.tot... sum" />
+                <marker date="1527155281460" expanded="true" signature="15564:15663" ph="select sum(l... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="15753:15847" ph="select count... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="16445:16614" ph="SELECT COUNT... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="16881:17044" ph="SELECT MIN(t... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="17312:17491" ph="select sum(l... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="17781:18167" ph="SELECT o.tot... sum" />
+                <marker date="1527155281460" expanded="true" signature="17869:17974" ph="select sum(l... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="18064:18164" ph="select count... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="18741:18904" ph="SELECT COUNT... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="19171:19328" ph="SELECT MIN(t... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="19596:19769" ph="select sum(l... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="20059:20433" ph="SELECT o.tot... sum" />
+                <marker date="1527155281460" expanded="true" signature="20147:20246" ph="select sum(l... opreturnoutput" />
+                <marker date="1527155281460" expanded="true" signature="20336:20430" ph="select count... opreturnoutput" />
               </folding>
             </state>
           </provider>
@@ -76,7 +108,7 @@
       <file leaf-file-name="OpreturnDataTable.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/OpreturnDataTable.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
+            <state relative-caret-position="2108">
               <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
               <folding />
             </state>
@@ -86,7 +118,7 @@
       <file leaf-file-name="tables.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/Blockchain Info/tables.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
+            <state relative-caret-position="12767">
               <caret line="751" column="21" lean-forward="false" selection-start-line="751" selection-start-column="21" selection-end-line="751" selection-end-column="21" />
               <folding />
             </state>
@@ -96,8 +128,8 @@
       <file leaf-file-name="ConnectionManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DBconnector/ConnectionManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+            <state relative-caret-position="88">
+              <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -167,8 +199,8 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/web.fxml" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.tld" />
         <option value="$PROJECT_DIR$/web/OpreturnDataTable.jsp" />
-        <option value="$PROJECT_DIR$/src/Useful/Protocol.java" />
         <option value="$PROJECT_DIR$/src/Servlets/OpReturnData.java" />
+        <option value="$PROJECT_DIR$/src/Useful/Protocol.java" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
       </list>
     </option>
@@ -245,10 +277,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -712,7 +744,9 @@
       <workItem from="1526825382300" duration="1180000" />
       <workItem from="1526910850264" duration="4503000" />
       <workItem from="1526979599981" duration="8930000" />
-      <workItem from="1527065260112" duration="7570000" />
+      <workItem from="1527065260112" duration="8230000" />
+      <workItem from="1527093383904" duration="2019000" />
+      <workItem from="1527152333798" duration="3095000" />
     </task>
     <task id="LOCAL-00001" summary="Risolti problemi con il Server Apache -- Ora si connette correttamente al DB MySQL &#10;Creata Servlet per l' inserimento dei dati nella tabella (per ora solo di prova)&#10;Mascherate altre pagine e componenti del sito inutili&#10;Inizio creazione classe che dato il protocollo ne restituisce la categoria (Dovrò vedere se usare un HashSet o lasciare una Generic List)">
       <created>1526466383622</created>
@@ -763,46 +797,53 @@
       <option name="project" value="LOCAL" />
       <updated>1526983670806</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Servlet Ottimizzata">
+      <created>1527082618842</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1527082618842</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138884000" />
+    <option name="totallyTimeSpent" value="144658000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28976378" sideWeight="0.12737921" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="7.320644E-4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28976378" sideWeight="0.12737921" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30882353" sideWeight="0.87262076" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30882353" sideWeight="0.87262076" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21785174" sideWeight="0.49346405" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22390318" sideWeight="0.49346405" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21482602" sideWeight="0.50653595" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="7.320644E-4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -859,6 +900,10 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/web/Blockchain Info/cards.html">
@@ -1100,69 +1145,101 @@
     <entry file="file://$PROJECT_DIR$/src/Servlets/OpreturnDataTable.java" />
     <entry file="file://$PROJECT_DIR$/web/Blockchain Info/tables.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="12767">
           <caret line="751" column="21" lean-forward="false" selection-start-line="751" selection-start-column="21" selection-end-line="751" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+    <entry file="file://$PROJECT_DIR$/web/OpreturnDataTable.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="41" lean-forward="false" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
+        <state relative-caret-position="2108">
+          <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DBconnector/ConnectionManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        <state relative-caret-position="88">
+          <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/OpreturnDataTable.jsp">
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+        <state relative-caret-position="216">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Useful/Protocol.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-191">
-          <caret line="70" column="10" lean-forward="true" selection-start-line="70" selection-start-column="10" selection-end-line="70" selection-end-column="10" />
+        <state relative-caret-position="56">
+          <caret line="18" column="59" lean-forward="false" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Servlets/OpReturnData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-748">
-          <caret line="49" column="58" lean-forward="false" selection-start-line="49" selection-start-column="58" selection-end-line="49" selection-end-column="58" />
+        <state relative-caret-position="134">
+          <caret line="27" column="59" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1527073813574" expanded="true" signature="1662:1715" ph="SELECT DISTI... opreturnoutput" />
-            <marker date="1527073813574" expanded="true" signature="2371:2458" ph="SELECT COUNT... opreturnoutput" />
-            <marker date="1527073813574" expanded="true" signature="2724:2805" ph="SELECT MIN(t... opreturnoutput" />
-            <marker date="1527073813574" expanded="true" signature="3345:3430" ph="SELECT COUNT... opreturnoutput" />
-            <marker date="1527073813574" expanded="true" signature="3697:3776" ph="SELECT MIN(t... opreturnoutput" />
-            <marker date="1527073813574" expanded="true" signature="4328:4424" ph="SELECT COUNT... opreturnoutput" />
-            <marker date="1527073813574" expanded="true" signature="4691:4781" ph="SELECT MIN(t... opreturnoutput" />
-            <marker date="1527073813574" expanded="true" signature="5330:5420" ph="SELECT COUNT... opreturnoutput" />
-            <marker date="1527073813574" expanded="true" signature="5687:5771" ph="SELECT MIN(t... opreturnoutput" />
-            <marker date="1527073813574" expanded="true" signature="6337:6429" ph="SELECT COUNT... opreturnoutput" />
-            <marker date="1527073813574" expanded="true" signature="6696:6782" ph="SELECT MIN(t... opreturnoutput" />
-            <marker date="1527073813574" expanded="true" signature="7352:7441" ph="SELECT COUNT... opreturnoutput" />
-            <marker date="1527073813574" expanded="true" signature="7708:7791" ph="SELECT MIN(t... opreturnoutput" />
-            <marker date="1527073813574" expanded="true" signature="8360:8455" ph="SELECT COUNT... opreturnoutput" />
-            <marker date="1527073813574" expanded="true" signature="8722:8811" ph="SELECT MIN(t... opreturnoutput" />
-            <marker date="1527073813574" expanded="true" signature="9359:9448" ph="SELECT COUNT... opreturnoutput" />
-            <marker date="1527073813574" expanded="true" signature="9715:9798" ph="SELECT MIN(t... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="1818:1871" ph="SELECT DISTI... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="2767:2928" ph="SELECT COUNT... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="3194:3349" ph="SELECT MIN(t... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="3617:3788" ph="select sum(l... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="4078:4448" ph="SELECT o.tot... sum" />
+            <marker date="1527155281460" expanded="true" signature="4166:4263" ph="select sum(l... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="4353:4445" ph="select count... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="5014:5173" ph="SELECT COUNT... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="5440:5593" ph="SELECT MIN(t... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="5861:6030" ph="select sum(l... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="6320:6686" ph="SELECT o.tot... sum" />
+            <marker date="1527155281460" expanded="true" signature="6408:6503" ph="select sum(l... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="6593:6683" ph="select count... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="7264:7434" ph="SELECT COUNT... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="7701:7865" ph="SELECT MIN(t... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="8133:8313" ph="select sum(l... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="8603:8991" ph="SELECT o.tot... sum" />
+            <marker date="1527155281460" expanded="true" signature="8691:8797" ph="select sum(l... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="8887:8988" ph="select count... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="9566:9730" ph="SELECT COUNT... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="9997:10155" ph="SELECT MIN(t... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="10423:10597" ph="select sum(l... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="10887:11263" ph="SELECT o.tot... sum" />
+            <marker date="1527155281460" expanded="true" signature="10975:11075" ph="select sum(l... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="11165:11260" ph="select count... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="11855:12021" ph="SELECT COUNT... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="12288:12448" ph="SELECT MIN(t... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="12716:12892" ph="select sum(l... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="13182:13562" ph="SELECT o.tot... sum" />
+            <marker date="1527155281460" expanded="true" signature="13270:13372" ph="select sum(l... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="13462:13559" ph="select count... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="14158:14321" ph="SELECT COUNT... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="14588:14745" ph="SELECT MIN(t... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="15013:15186" ph="select sum(l... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="15476:15850" ph="SELECT o.tot... sum" />
+            <marker date="1527155281460" expanded="true" signature="15564:15663" ph="select sum(l... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="15753:15847" ph="select count... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="16445:16614" ph="SELECT COUNT... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="16881:17044" ph="SELECT MIN(t... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="17312:17491" ph="select sum(l... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="17781:18167" ph="SELECT o.tot... sum" />
+            <marker date="1527155281460" expanded="true" signature="17869:17974" ph="select sum(l... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="18064:18164" ph="select count... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="18741:18904" ph="SELECT COUNT... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="19171:19328" ph="SELECT MIN(t... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="19596:19769" ph="select sum(l... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="20059:20433" ph="SELECT o.tot... sum" />
+            <marker date="1527155281460" expanded="true" signature="20147:20246" ph="select sum(l... opreturnoutput" />
+            <marker date="1527155281460" expanded="true" signature="20336:20430" ph="select count... opreturnoutput" />
           </folding>
         </state>
       </provider>

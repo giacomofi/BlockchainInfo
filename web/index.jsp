@@ -2,6 +2,8 @@
 <%@page import="DBconnector.ConnectionManager"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import ="Servlets.OpReturnData"%>
+
+
 <%--
   Created by IntelliJ IDEA.
   User: giaco
@@ -17,6 +19,8 @@
   </head>
   <body>
   <%
+
+
 
 
   %>

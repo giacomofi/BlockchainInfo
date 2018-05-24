@@ -59,6 +59,8 @@ public class OpReturnData extends HttpServlet {
         Statement stmnt = null;
         Statement stmnt1 = null;
         Statement stmnt2 = null;
+        Statement stmnt3 = null;
+        Statement stmnt4 = null;
 
         try{
 
@@ -66,6 +68,8 @@ public class OpReturnData extends HttpServlet {
             stmnt = conn.createStatement();
             stmnt1 = conn.createStatement();
             stmnt2 = conn.createStatement();
+            stmnt3 = conn.createStatement();
+            stmnt4 = conn.createStatement();
 
             String protocolquery = "SELECT DISTINCT protocol FROM opreturn.opreturnoutput";
 
@@ -78,6 +82,8 @@ public class OpReturnData extends HttpServlet {
                 //Dummies save MySQL db data
 
                 Integer elementsDummy;
+                Integer totalSizeDummy;
+                Integer averageSizeDummy;
                 Timestamp dateDummy;
                 String protocolDummy = rs.getString("protocol");
                 List<String> tableData = new ArrayList<>();
@@ -86,21 +92,42 @@ public class OpReturnData extends HttpServlet {
 
                 ResultSet epprs; //Elements Per Protocol Result Set
                 ResultSet daters; //Txdate Result Sets
+                ResultSet totalsizers; //Total size of Metadata Per Protocol
+                ResultSet averagesizers; //Average size of Metadata per Protocol
 
 
 
                 switch(protocolDummy){
 
                     case "unknown":
-                        epprs = stmnt1.executeQuery("SELECT COUNT(protocol) AS count FROM opreturn.opreturnoutput WHERE protocol = 'unknown' ");
+                        epprs = stmnt1.executeQuery("SELECT COUNT(protocol) AS count" +
+                                " FROM opreturn.opreturnoutput " +
+                                "WHERE protocol = 'unknown' ");
                         while(epprs.next()){
                             elementsDummy = epprs.getInt("count");
                             tableData.add(elementsDummy.toString());
                         }
-                        daters = stmnt2.executeQuery("SELECT MIN(txdate) AS min FROM opreturn.opreturnoutput WHERE protocol = 'unknown'");
+                        daters = stmnt2.executeQuery("SELECT MIN(txdate) AS min " +
+                                "FROM opreturn.opreturnoutput " +
+                                "WHERE protocol = 'unknown'");
                         while(daters.next()){
                             dateDummy = daters.getTimestamp("min");
                             tableData.add(dateDummy.toString());
+                        }
+                        totalsizers = stmnt3.executeQuery("select sum(length(metadata)) as totalsize " +
+                                "from opreturn.opreturnoutput " +
+                                "where protocol = 'unknown'");
+                        while(totalsizers.next()){
+                            totalSizeDummy = totalsizers.getInt("totalsize");
+                            tableData.add(totalSizeDummy.toString());
+                        }
+                        averagesizers = stmnt4.executeQuery("SELECT o.totalsize / p.numberofel as average  " +
+                                "from(select sum(length(metadata)) as totalsize from opreturn.opreturnoutput where protocol = 'unknown') o " +
+                                "cross join " +
+                                "(select count(metadata) as numberofel from opreturn.opreturnoutput where protocol = 'unknown') p");
+                        while(averagesizers.next()){
+                            averageSizeDummy = averagesizers.getInt("average");
+                            tableData.add(averageSizeDummy.toString());
                         }
                         tableData.add("Unknown");
                         tableData.add("???");
@@ -111,15 +138,34 @@ public class OpReturnData extends HttpServlet {
                         break;
 
                     case "empty":
-                        epprs = stmnt1.executeQuery("SELECT COUNT(protocol) AS count FROM opreturn.opreturnoutput WHERE protocol = 'empty' ");
+                        epprs = stmnt1.executeQuery("SELECT COUNT(protocol) AS count " +
+                                "FROM opreturn.opreturnoutput" +
+                                " WHERE protocol = 'empty' ");
                         while(epprs.next()) {
                             elementsDummy = epprs.getInt("count");
                             tableData.add(elementsDummy.toString());
                         }
-                        daters = stmnt2.executeQuery("SELECT MIN(txdate) AS min FROM opreturn.opreturnoutput WHERE protocol = 'empty'");
+                        daters = stmnt2.executeQuery("SELECT MIN(txdate) AS min " +
+                                "FROM opreturn.opreturnoutput " +
+                                "WHERE protocol = 'empty'");
                         while(daters.next()){
                             dateDummy = daters.getTimestamp("min");
                             tableData.add(dateDummy.toString());
+                        }
+                        totalsizers = stmnt3.executeQuery("select sum(length(metadata)) as totalsize " +
+                                "from opreturn.opreturnoutput " +
+                                "where protocol = 'empty'");
+                        while(totalsizers.next()){
+                            totalSizeDummy = totalsizers.getInt("totalsize");
+                            tableData.add(totalSizeDummy.toString());
+                        }
+                        averagesizers = stmnt4.executeQuery("SELECT o.totalsize / p.numberofel as average  " +
+                                "from(select sum(length(metadata)) as totalsize from opreturn.opreturnoutput where protocol = 'empty') o " +
+                                "cross join " +
+                                "(select count(metadata) as numberofel from opreturn.opreturnoutput where protocol = 'empty') p");
+                        while(averagesizers.next()){
+                            averageSizeDummy = averagesizers.getInt("average");
+                            tableData.add(averageSizeDummy.toString());
                         }
                         tableData.add("Empty");
                         tableData.add("--");
@@ -128,15 +174,34 @@ public class OpReturnData extends HttpServlet {
                         break;
 
                     case "proofofexistence":
-                        epprs = stmnt1.executeQuery("SELECT COUNT(protocol) AS count FROM opreturn.opreturnoutput WHERE protocol = 'proofofexistence' ");
+                        epprs = stmnt1.executeQuery("SELECT COUNT(protocol) AS count " +
+                                "FROM opreturn.opreturnoutput " +
+                                "WHERE protocol = 'proofofexistence' ");
                         while(epprs.next()) {
                             elementsDummy = epprs.getInt("count");
                             tableData.add(elementsDummy.toString());
                         }
-                        daters = stmnt2.executeQuery("SELECT MIN(txdate) AS min FROM opreturn.opreturnoutput WHERE protocol = 'proofofexistence'");
+                        daters = stmnt2.executeQuery("SELECT MIN(txdate) AS min " +
+                                "FROM opreturn.opreturnoutput " +
+                                "WHERE protocol = 'proofofexistence'");
                         while(daters.next()){
                             dateDummy = daters.getTimestamp("min");
                             tableData.add(dateDummy.toString());
+                        }
+                        totalsizers = stmnt3.executeQuery("select sum(length(metadata)) as totalsize " +
+                                "from opreturn.opreturnoutput " +
+                                "where protocol = 'proofofexistence'");
+                        while(totalsizers.next()){
+                            totalSizeDummy = totalsizers.getInt("totalsize");
+                            tableData.add(totalSizeDummy.toString());
+                        }
+                        averagesizers = stmnt4.executeQuery("SELECT o.totalsize / p.numberofel as average  " +
+                                "from(select sum(length(metadata)) as totalsize from opreturn.opreturnoutput where protocol = 'proofofexistence') o " +
+                                "cross join " +
+                                "(select count(metadata) as numberofel from opreturn.opreturnoutput where protocol = 'proofofexistence') p");
+                        while(averagesizers.next()){
+                            averageSizeDummy = averagesizers.getInt("average");
+                            tableData.add(averageSizeDummy.toString());
                         }
                         tableData.add("Notary");
                         tableData.add("Hash");
@@ -145,15 +210,34 @@ public class OpReturnData extends HttpServlet {
                         break;
 
                     case "openassets":
-                        epprs = stmnt1.executeQuery("SELECT COUNT(protocol) AS count FROM opreturn.opreturnoutput WHERE protocol = 'openassets' ");
+                        epprs = stmnt1.executeQuery("SELECT COUNT(protocol) AS count" +
+                                " FROM opreturn.opreturnoutput" +
+                                " WHERE protocol = 'openassets' ");
                         while(epprs.next()) {
                             elementsDummy = epprs.getInt("count");
                             tableData.add(elementsDummy.toString());
                         }
-                        daters = stmnt2.executeQuery("SELECT MIN(txdate) AS min FROM opreturn.opreturnoutput WHERE protocol = 'openassets'");
+                        daters = stmnt2.executeQuery("SELECT MIN(txdate) AS min " +
+                                "FROM opreturn.opreturnoutput" +
+                                " WHERE protocol = 'openassets'");
                         while(daters.next()){
                             dateDummy = daters.getTimestamp("min");
                             tableData.add(dateDummy.toString());
+                        }
+                        totalsizers = stmnt3.executeQuery("select sum(length(metadata)) as totalsize " +
+                                "from opreturn.opreturnoutput" +
+                                " where protocol = 'openassets'");
+                        while(totalsizers.next()){
+                            totalSizeDummy = totalsizers.getInt("totalsize");
+                            tableData.add(totalSizeDummy.toString());
+                        }
+                        averagesizers = stmnt4.executeQuery("SELECT o.totalsize / p.numberofel as average  " +
+                                "from(select sum(length(metadata)) as totalsize from opreturn.opreturnoutput where protocol = 'openassets') o " +
+                                "cross join " +
+                                "(select count(metadata) as numberofel from opreturn.opreturnoutput where protocol = 'openassets') p");
+                        while(averagesizers.next()){
+                            averageSizeDummy = averagesizers.getInt("average");
+                            tableData.add(averageSizeDummy.toString());
                         }
                         tableData.add("Financial");
                         tableData.add("Financial Record");
@@ -162,15 +246,34 @@ public class OpReturnData extends HttpServlet {
                         break;
 
                     case "counterparty":
-                        epprs = stmnt1.executeQuery("SELECT COUNT(protocol) AS count FROM opreturn.opreturnoutput WHERE protocol = 'counterparty' ");
+                        epprs = stmnt1.executeQuery("SELECT COUNT(protocol) AS count " +
+                                "FROM opreturn.opreturnoutput " +
+                                "WHERE protocol = 'counterparty' ");
                         while(epprs.next()) {
                             elementsDummy = epprs.getInt("count");
                             tableData.add(elementsDummy.toString());
                         }
-                        daters = stmnt2.executeQuery("SELECT MIN(txdate) AS min FROM opreturn.opreturnoutput WHERE protocol = 'counterparty'");
+                        daters = stmnt2.executeQuery("SELECT MIN(txdate) AS min " +
+                                "FROM opreturn.opreturnoutput" +
+                                " WHERE protocol = 'counterparty'");
                         while(daters.next()){
                             dateDummy = daters.getTimestamp("min");
                             tableData.add(dateDummy.toString());
+                        }
+                        totalsizers = stmnt3.executeQuery("select sum(length(metadata)) as totalsize " +
+                                "from opreturn.opreturnoutput " +
+                                "where protocol = 'counterparty'");
+                        while(totalsizers.next()){
+                            totalSizeDummy = totalsizers.getInt("totalsize");
+                            tableData.add(totalSizeDummy.toString());
+                        }
+                        averagesizers = stmnt4.executeQuery("SELECT o.totalsize / p.numberofel as average  " +
+                                "from(select sum(length(metadata)) as totalsize from opreturn.opreturnoutput where protocol = 'counterparty') o " +
+                                "cross join " +
+                                "(select count(metadata) as numberofel from opreturn.opreturnoutput where protocol = 'counterparty') p");
+                        while(averagesizers.next()){
+                            averageSizeDummy = averagesizers.getInt("average");
+                            tableData.add(averageSizeDummy.toString());
                         }
                         tableData.add("Financial");
                         tableData.add("Financial Record");
@@ -179,15 +282,34 @@ public class OpReturnData extends HttpServlet {
                         break;
 
                     case "coinspark":
-                        epprs = stmnt1.executeQuery("SELECT COUNT(protocol) AS count FROM opreturn.opreturnoutput WHERE protocol = 'coinspark' ");
+                        epprs = stmnt1.executeQuery("SELECT COUNT(protocol) AS count " +
+                                "FROM opreturn.opreturnoutput" +
+                                " WHERE protocol = 'coinspark' ");
                         while(epprs.next()) {
                             elementsDummy = epprs.getInt("count");
                             tableData.add(elementsDummy.toString());
                         }
-                        daters = stmnt2.executeQuery("SELECT MIN(txdate) AS min FROM opreturn.opreturnoutput WHERE protocol = 'coinspark'");
+                        daters = stmnt2.executeQuery("SELECT MIN(txdate) AS min " +
+                                "FROM opreturn.opreturnoutput " +
+                                "WHERE protocol = 'coinspark'");
                         while(daters.next()){
                             dateDummy = daters.getTimestamp("min");
                             tableData.add(dateDummy.toString());
+                        }
+                        totalsizers = stmnt3.executeQuery("select sum(length(metadata)) as totalsize " +
+                                "from opreturn.opreturnoutput " +
+                                "where protocol = 'coinspark'");
+                        while(totalsizers.next()){
+                            totalSizeDummy = totalsizers.getInt("totalsize");
+                            tableData.add(totalSizeDummy.toString());
+                        }
+                        averagesizers = stmnt4.executeQuery("SELECT o.totalsize / p.numberofel as average  " +
+                                "from(select sum(length(metadata)) as totalsize from opreturn.opreturnoutput where protocol = 'coinspark') o " +
+                                "cross join " +
+                                "(select count(metadata) as numberofel from opreturn.opreturnoutput where protocol = 'coinspark') p");
+                        while(averagesizers.next()){
+                            averageSizeDummy = averagesizers.getInt("average");
+                            tableData.add(averageSizeDummy.toString());
                         }
                         tableData.add("Financial");
                         tableData.add("Financial Record");
@@ -196,15 +318,34 @@ public class OpReturnData extends HttpServlet {
                         break;
 
                     case "cryptocopyright":
-                        epprs = stmnt1.executeQuery("SELECT COUNT(protocol) AS count FROM opreturn.opreturnoutput WHERE protocol = 'cryptocopyright' ");
+                        epprs = stmnt1.executeQuery("SELECT COUNT(protocol) AS count " +
+                                "FROM opreturn.opreturnoutput " +
+                                "WHERE protocol = 'cryptocopyright' ");
                         while(epprs.next()) {
                             elementsDummy = epprs.getInt("count");
                             tableData.add(elementsDummy.toString());
                         }
-                        daters = stmnt2.executeQuery("SELECT MIN(txdate) AS min FROM opreturn.opreturnoutput WHERE protocol = 'cryptocopyright'");
+                        daters = stmnt2.executeQuery("SELECT MIN(txdate) AS min " +
+                                "FROM opreturn.opreturnoutput " +
+                                "WHERE protocol = 'cryptocopyright'");
                         while(daters.next()){
                             dateDummy = daters.getTimestamp("min");
                             tableData.add(dateDummy.toString());
+                        }
+                        totalsizers = stmnt3.executeQuery("select sum(length(metadata)) as totalsize " +
+                                "from opreturn.opreturnoutput " +
+                                "where protocol = 'cryptocopyright'");
+                        while(totalsizers.next()){
+                            totalSizeDummy = totalsizers.getInt("totalsize");
+                            tableData.add(totalSizeDummy.toString());
+                        }
+                        averagesizers = stmnt4.executeQuery("SELECT o.totalsize / p.numberofel as average  " +
+                                "from(select sum(length(metadata)) as totalsize from opreturn.opreturnoutput where protocol = 'cryptocopyright') o " +
+                                "cross join " +
+                                "(select count(metadata) as numberofel from opreturn.opreturnoutput where protocol = 'cryptocopyright') p");
+                        while(averagesizers.next()){
+                            averageSizeDummy = averagesizers.getInt("average");
+                            tableData.add(averageSizeDummy.toString());
                         }
                         tableData.add("Notary");
                         tableData.add("Hash");
@@ -213,15 +354,34 @@ public class OpReturnData extends HttpServlet {
                         break;
 
                     case "blocksign":
-                        epprs = stmnt1.executeQuery("SELECT COUNT(protocol) AS count FROM opreturn.opreturnoutput WHERE protocol = 'blocksign' ");
+                        epprs = stmnt1.executeQuery("SELECT COUNT(protocol) AS count " +
+                                "FROM opreturn.opreturnoutput " +
+                                "WHERE protocol = 'blocksign' ");
                         while(epprs.next()) {
                             elementsDummy = epprs.getInt("count");
                             tableData.add(elementsDummy.toString());
                         }
-                        daters = stmnt2.executeQuery("SELECT MIN(txdate) AS min FROM opreturn.opreturnoutput WHERE protocol = 'blocksign'");
+                        daters = stmnt2.executeQuery("SELECT MIN(txdate) AS min " +
+                                "FROM opreturn.opreturnoutput " +
+                                "WHERE protocol = 'blocksign'");
                         while(daters.next()){
                             dateDummy = daters.getTimestamp("min");
                             tableData.add(dateDummy.toString());
+                        }
+                        totalsizers = stmnt3.executeQuery("select sum(length(metadata)) as totalsize " +
+                                "from opreturn.opreturnoutput " +
+                                "where protocol = 'blocksign'");
+                        while(totalsizers.next()){
+                            totalSizeDummy = totalsizers.getInt("totalsize");
+                            tableData.add(totalSizeDummy.toString());
+                        }
+                        averagesizers = stmnt4.executeQuery("SELECT o.totalsize / p.numberofel as average  " +
+                                "from(select sum(length(metadata)) as totalsize from opreturn.opreturnoutput where protocol = 'blocksign') o " +
+                                "cross join " +
+                                "(select count(metadata) as numberofel from opreturn.opreturnoutput where protocol = 'blocksign') p");
+                        while(averagesizers.next()){
+                            averageSizeDummy = averagesizers.getInt("average");
+                            tableData.add(averageSizeDummy.toString());
                         }
                         tableData.add("Notary");
                         tableData.add("Hash");
@@ -231,10 +391,6 @@ public class OpReturnData extends HttpServlet {
 
                 }
             }
-
-
-
-
 
         }catch (SQLException e){
 
@@ -248,10 +404,20 @@ public class OpReturnData extends HttpServlet {
                     stmnt.close();
 
                 if(stmnt1 != null)
-                    stmnt.close();
+                    stmnt1.close();
 
                 if(stmnt2 != null)
-                    stmnt.close();
+                    stmnt2.close();
+
+                if(stmnt3 != null){
+
+                    stmnt3.close();
+                }
+
+                if(stmnt4 != null){
+
+                    stmnt4.close();
+                }
 
                 if(conn != null)
                     conn.close();
