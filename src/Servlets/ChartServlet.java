@@ -5,6 +5,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.xml.transform.Result;
 import java.io.IOException;
 
 import java.util.*;
@@ -47,11 +48,17 @@ public class ChartServlet extends HttpServlet {
         Statement stmnt1 = null;
         Statement stmnt2 = null;
         Statement stmnt3 = null;
+        Statement stmnt4 = null;
 
         try{
 
             conn = db.getConnection();
             stmnt = conn.createStatement();
+            stmnt1 = conn.createStatement();
+            stmnt2 = conn.createStatement();
+            stmnt3 = conn.createStatement();
+            stmnt4 = conn.createStatement();
+
 
             String protocolquery = "SELECT DISTINCT protocol FROM opreturn.opreturnoutput";
             String yearQuery = "SELECT DISTINCT (year(txdate)) AS year FROM opreturn.opreturnoutput";
@@ -64,11 +71,13 @@ public class ChartServlet extends HttpServlet {
             while(rs.next()){
 
                 Integer transactionsPerProtocol;
+                Integer averageUtilization;
                 List<Integer> chartData = new ArrayList<>();
 
                 String protocolDummy = rs.getString("protocol");
 
                 ResultSet epprs; //Elements Per Protocol Result Set
+                ResultSet aurs; //Average Utilization Result Set
 
                 switch(protocolDummy){
 
@@ -80,6 +89,14 @@ public class ChartServlet extends HttpServlet {
                         while(epprs.next()){
                             transactionsPerProtocol = epprs.getInt("count");
                             chartData.add(transactionsPerProtocol);
+                        }
+                        aurs = stmnt4.executeQuery("select ((o.transactionperprotocol / p.transactionperyear)*100)  as averageutilization" +
+                                " from(select count(protocol) as transactionperprotocol from opreturn.opreturnoutput where protocol = 'unknown') o" +
+                                "CROSS JOIN " +
+                                "(select count(protocol) as transactionperyear from opreturn.opreturnoutput) p");
+                        while(aurs.next()){
+                            averageUtilization = aurs.getInt("averageutilization");
+                            chartData.add(averageUtilization);
                         }
                         protocolChart.put(protocolDummy,chartData);
                         break;
@@ -93,6 +110,14 @@ public class ChartServlet extends HttpServlet {
                             transactionsPerProtocol = epprs.getInt("count");
                             chartData.add(transactionsPerProtocol);
                         }
+                        aurs = stmnt4.executeQuery("select ((o.transactionperprotocol / p.transactionperyear)*100)  as averageutilization" +
+                                " from(select count(protocol) as transactionperprotocol from opreturn.opreturnoutput where protocol = 'empty') o" +
+                                "CROSS JOIN " +
+                                "(select count(protocol) as transactionperyear from opreturn.opreturnoutput) p");
+                        while(aurs.next()){
+                            averageUtilization = aurs.getInt("averageutilization");
+                            chartData.add(averageUtilization);
+                        }
                         protocolChart.put(protocolDummy,chartData);
                         break;
 
@@ -104,6 +129,14 @@ public class ChartServlet extends HttpServlet {
                         while(epprs.next()){
                             transactionsPerProtocol = epprs.getInt("count");
                             chartData.add(transactionsPerProtocol);
+                        }
+                        aurs = stmnt4.executeQuery("select ((o.transactionperprotocol / p.transactionperyear)*100)  as averageutilization" +
+                                " from(select count(protocol) as transactionperprotocol from opreturn.opreturnoutput where protocol = 'proofofexistence') o" +
+                                "CROSS JOIN " +
+                                "(select count(protocol) as transactionperyear from opreturn.opreturnoutput) p");
+                        while(aurs.next()){
+                            averageUtilization = aurs.getInt("averageutilization");
+                            chartData.add(averageUtilization);
                         }
                         protocolChart.put(protocolDummy,chartData);
                         break;
@@ -117,6 +150,14 @@ public class ChartServlet extends HttpServlet {
                             transactionsPerProtocol = epprs.getInt("count");
                             chartData.add(transactionsPerProtocol);
                         }
+                        aurs = stmnt4.executeQuery("select ((o.transactionperprotocol / p.transactionperyear)*100)  as averageutilization" +
+                                " from(select count(protocol) as transactionperprotocol from opreturn.opreturnoutput where protocol = 'openassets') o" +
+                                "CROSS JOIN " +
+                                "(select count(protocol) as transactionperyear from opreturn.opreturnoutput) p");
+                        while(aurs.next()){
+                            averageUtilization = aurs.getInt("averageutilization");
+                            chartData.add(averageUtilization);
+                        }
                         protocolChart.put(protocolDummy,chartData);
                         break;
 
@@ -128,6 +169,14 @@ public class ChartServlet extends HttpServlet {
                         while(epprs.next()){
                             transactionsPerProtocol = epprs.getInt("count");
                             chartData.add(transactionsPerProtocol);
+                        }
+                        aurs = stmnt4.executeQuery("select ((o.transactionperprotocol / p.transactionperyear)*100)  as averageutilization" +
+                                " from(select count(protocol) as transactionperprotocol from opreturn.opreturnoutput where protocol = 'counterparty') o" +
+                                "CROSS JOIN " +
+                                "(select count(protocol) as transactionperyear from opreturn.opreturnoutput) p");
+                        while(aurs.next()){
+                            averageUtilization = aurs.getInt("averageutilization");
+                            chartData.add(averageUtilization);
                         }
                         protocolChart.put(protocolDummy,chartData);
                         break;
@@ -141,6 +190,14 @@ public class ChartServlet extends HttpServlet {
                             transactionsPerProtocol = epprs.getInt("count");
                             chartData.add(transactionsPerProtocol);
                         }
+                        aurs = stmnt4.executeQuery("select ((o.transactionperprotocol / p.transactionperyear)*100)  as averageutilization" +
+                                " from(select count(protocol) as transactionperprotocol from opreturn.opreturnoutput where protocol = 'coinspark') o" +
+                                "CROSS JOIN " +
+                                "(select count(protocol) as transactionperyear from opreturn.opreturnoutput) p");
+                        while(aurs.next()){
+                            averageUtilization = aurs.getInt("averageutilization");
+                            chartData.add(averageUtilization);
+                        }
                         protocolChart.put(protocolDummy,chartData);
                         break;
 
@@ -153,6 +210,14 @@ public class ChartServlet extends HttpServlet {
                             transactionsPerProtocol = epprs.getInt("count");
                             chartData.add(transactionsPerProtocol);
                         }
+                        aurs = stmnt4.executeQuery("select ((o.transactionperprotocol / p.transactionperyear)*100)  as averageutilization" +
+                                " from(select count(protocol) as transactionperprotocol from opreturn.opreturnoutput where protocol = 'cryptocopyright') o" +
+                                "CROSS JOIN " +
+                                "(select count(protocol) as transactionperyear from opreturn.opreturnoutput) p");
+                        while(aurs.next()){
+                            averageUtilization = aurs.getInt("averageutilization");
+                            chartData.add(averageUtilization);
+                        }
                         protocolChart.put(protocolDummy,chartData);
                         break;
 
@@ -164,6 +229,14 @@ public class ChartServlet extends HttpServlet {
                         while(epprs.next()){
                             transactionsPerProtocol = epprs.getInt("count");
                             chartData.add(transactionsPerProtocol);
+                        }
+                        aurs = stmnt4.executeQuery("select ((o.transactionperprotocol / p.transactionperyear)*100)  as averageutilization" +
+                                " from(select count(protocol) as transactionperprotocol from opreturn.opreturnoutput where protocol = 'blocksign') o" +
+                                "CROSS JOIN " +
+                                "(select count(protocol) as transactionperyear from opreturn.opreturnoutput) p");
+                        while(aurs.next()){
+                            averageUtilization = aurs.getInt("averageutilization");
+                            chartData.add(averageUtilization);
                         }
                         protocolChart.put(protocolDummy,chartData);
                         break;
@@ -262,6 +335,10 @@ public class ChartServlet extends HttpServlet {
                 if(stmnt3 != null)
 
                     stmnt3.close();
+
+                if(stmnt4 != null)
+
+                    stmnt4.close();
 
             } catch(SQLException e){
 
