@@ -7,9 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f0da966-98df-4e12-9ed9-7c9143722b7f" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Servlets/ChartServlet.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/web/OpreturnDataTable.jsp" afterPath="$PROJECT_DIR$/web/OpreturnDataTable.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/Servlets/ChartServlet.java" afterPath="$PROJECT_DIR$/src/Servlets/ChartServlet.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -117,19 +116,24 @@
       <file leaf-file-name="ChartServlet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Servlets/ChartServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="865">
-              <caret line="163" column="67" lean-forward="false" selection-start-line="163" selection-start-column="67" selection-end-line="163" selection-end-column="67" />
+            <state relative-caret-position="1023">
+              <caret line="233" column="17" lean-forward="true" selection-start-line="233" selection-start-column="17" selection-end-line="233" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1527588716480" expanded="true" signature="1283:1336" ph="SELECT DISTI... opreturnoutput" />
-                <marker date="1527588716480" expanded="true" signature="1879:2040" ph="SELECT COUNT... opreturnoutput" />
-                <marker date="1527588716480" expanded="true" signature="2449:2608" ph="SELECT COUNT... opreturnoutput" />
-                <marker date="1527588716480" expanded="true" signature="3028:3198" ph="SELECT COUNT... opreturnoutput" />
-                <marker date="1527588716480" expanded="true" signature="3612:3776" ph="SELECT COUNT... opreturnoutput" />
-                <marker date="1527588716480" expanded="true" signature="4192:4358" ph="SELECT COUNT... opreturnoutput" />
-                <marker date="1527588716480" expanded="true" signature="4771:4934" ph="SELECT COUNT... opreturnoutput" />
-                <marker date="1527588716480" expanded="true" signature="5353:5522" ph="SELECT COUNT... opreturnoutput" />
-                <marker date="1527588716480" expanded="true" signature="5935:6098" ph="SELECT COUNT... opreturnoutput" />
+                <marker date="1527591370685" expanded="true" signature="1436:1489" ph="SELECT DISTI... opreturnoutput" />
+                <marker date="1527591370685" expanded="true" signature="1524:1591" ph="SELECT DISTI... opreturnoutput" />
+                <marker date="1527591370685" expanded="true" signature="2167:2328" ph="SELECT COUNT... opreturnoutput" />
+                <marker date="1527591370685" expanded="true" signature="2737:2896" ph="SELECT COUNT... opreturnoutput" />
+                <marker date="1527591370685" expanded="true" signature="3316:3486" ph="SELECT COUNT... opreturnoutput" />
+                <marker date="1527591370685" expanded="true" signature="3900:4064" ph="SELECT COUNT... opreturnoutput" />
+                <marker date="1527591370685" expanded="true" signature="4480:4646" ph="SELECT COUNT... opreturnoutput" />
+                <marker date="1527591370685" expanded="true" signature="5059:5222" ph="SELECT COUNT... opreturnoutput" />
+                <marker date="1527591370685" expanded="true" signature="5641:5810" ph="SELECT COUNT... opreturnoutput" />
+                <marker date="1527591370685" expanded="true" signature="6223:6386" ph="SELECT COUNT... opreturnoutput" />
+                <marker date="1527591370685" expanded="true" signature="7065:7243" ph="SELECT count... opreturnoutput" />
+                <marker date="1527591370685" expanded="true" signature="7612:7790" ph="SELECT count... opreturnoutput" />
+                <marker date="1527591370685" expanded="true" signature="8159:8337" ph="SELECT count... opreturnoutput" />
+                <marker date="1527591370685" expanded="true" signature="8706:8884" ph="SELECT count... opreturnoutput" />
               </folding>
             </state>
           </provider>
@@ -857,7 +861,7 @@
       <workItem from="1527065260112" duration="8230000" />
       <workItem from="1527093383904" duration="2019000" />
       <workItem from="1527152333798" duration="3476000" />
-      <workItem from="1527582277572" duration="5862000" />
+      <workItem from="1527582277572" duration="8297000" />
     </task>
     <task id="LOCAL-00001" summary="Risolti problemi con il Server Apache -- Ora si connette correttamente al DB MySQL &#10;Creata Servlet per l' inserimento dei dati nella tabella (per ora solo di prova)&#10;Mascherate altre pagine e componenti del sito inutili&#10;Inizio creazione classe che dato il protocollo ne restituisce la categoria (Dovrò vedere se usare un HashSet o lasciare una Generic List)">
       <created>1526466383622</created>
@@ -922,11 +926,18 @@
       <option name="project" value="LOCAL" />
       <updated>1527156096250</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Inizio creazione Servlet per i grafici">
+      <created>1527588788665</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1527588788665</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150901000" />
+    <option name="totallyTimeSpent" value="153336000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -943,12 +954,12 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30882353" sideWeight="0.87262076" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3006536" sideWeight="0.87262076" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22692889" sideWeight="0.8817967" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22692889" sideWeight="0.11820331" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22692889" sideWeight="0.88084114" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22692889" sideWeight="0.11915888" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1015,7 +1026,8 @@
     <MESSAGE value="Aggiunta una TreeMap alla Servlet in modo tale da poter ordinare gli elementi per chiave, e quindi essere sicuri che nella tabella tutte le associazioni vengano stampate correttamente" />
     <MESSAGE value="Servlet Ottimizzata" />
     <MESSAGE value="Aggiunte alla Servlet le Query per calcolare lo spazio totale occupato dai metadati, e lo spazio occupato medio" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aggiunte alla Servlet le Query per calcolare lo spazio totale occupato dai metadati, e lo spazio occupato medio" />
+    <MESSAGE value="Inizio creazione Servlet per i grafici" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inizio creazione Servlet per i grafici" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1353,19 +1365,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Servlets/ChartServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="865">
-          <caret line="163" column="67" lean-forward="false" selection-start-line="163" selection-start-column="67" selection-end-line="163" selection-end-column="67" />
+        <state relative-caret-position="1023">
+          <caret line="233" column="17" lean-forward="true" selection-start-line="233" selection-start-column="17" selection-end-line="233" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1527588716480" expanded="true" signature="1283:1336" ph="SELECT DISTI... opreturnoutput" />
-            <marker date="1527588716480" expanded="true" signature="1879:2040" ph="SELECT COUNT... opreturnoutput" />
-            <marker date="1527588716480" expanded="true" signature="2449:2608" ph="SELECT COUNT... opreturnoutput" />
-            <marker date="1527588716480" expanded="true" signature="3028:3198" ph="SELECT COUNT... opreturnoutput" />
-            <marker date="1527588716480" expanded="true" signature="3612:3776" ph="SELECT COUNT... opreturnoutput" />
-            <marker date="1527588716480" expanded="true" signature="4192:4358" ph="SELECT COUNT... opreturnoutput" />
-            <marker date="1527588716480" expanded="true" signature="4771:4934" ph="SELECT COUNT... opreturnoutput" />
-            <marker date="1527588716480" expanded="true" signature="5353:5522" ph="SELECT COUNT... opreturnoutput" />
-            <marker date="1527588716480" expanded="true" signature="5935:6098" ph="SELECT COUNT... opreturnoutput" />
+            <marker date="1527591370685" expanded="true" signature="1436:1489" ph="SELECT DISTI... opreturnoutput" />
+            <marker date="1527591370685" expanded="true" signature="1524:1591" ph="SELECT DISTI... opreturnoutput" />
+            <marker date="1527591370685" expanded="true" signature="2167:2328" ph="SELECT COUNT... opreturnoutput" />
+            <marker date="1527591370685" expanded="true" signature="2737:2896" ph="SELECT COUNT... opreturnoutput" />
+            <marker date="1527591370685" expanded="true" signature="3316:3486" ph="SELECT COUNT... opreturnoutput" />
+            <marker date="1527591370685" expanded="true" signature="3900:4064" ph="SELECT COUNT... opreturnoutput" />
+            <marker date="1527591370685" expanded="true" signature="4480:4646" ph="SELECT COUNT... opreturnoutput" />
+            <marker date="1527591370685" expanded="true" signature="5059:5222" ph="SELECT COUNT... opreturnoutput" />
+            <marker date="1527591370685" expanded="true" signature="5641:5810" ph="SELECT COUNT... opreturnoutput" />
+            <marker date="1527591370685" expanded="true" signature="6223:6386" ph="SELECT COUNT... opreturnoutput" />
+            <marker date="1527591370685" expanded="true" signature="7065:7243" ph="SELECT count... opreturnoutput" />
+            <marker date="1527591370685" expanded="true" signature="7612:7790" ph="SELECT count... opreturnoutput" />
+            <marker date="1527591370685" expanded="true" signature="8159:8337" ph="SELECT count... opreturnoutput" />
+            <marker date="1527591370685" expanded="true" signature="8706:8884" ph="SELECT count... opreturnoutput" />
           </folding>
         </state>
       </provider>

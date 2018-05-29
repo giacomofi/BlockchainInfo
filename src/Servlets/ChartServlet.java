@@ -25,6 +25,7 @@ public class ChartServlet extends HttpServlet {
     private ConnectionManager db = new ConnectionManager();
 
     private static HashMap <String,List<Integer>> protocolChart = new HashMap<>();
+    private static HashMap <Integer,Integer> transactionsPerYearMap = new HashMap<>();
 
     public ChartServlet(){
 
@@ -44,6 +45,8 @@ public class ChartServlet extends HttpServlet {
 
         Statement stmnt = null;
         Statement stmnt1 = null;
+        Statement stmnt2 = null;
+        Statement stmnt3 = null;
 
         try{
 
@@ -51,14 +54,15 @@ public class ChartServlet extends HttpServlet {
             stmnt = conn.createStatement();
 
             String protocolquery = "SELECT DISTINCT protocol FROM opreturn.opreturnoutput";
+            String yearQuery = "SELECT DISTINCT (year(txdate)) AS year FROM opreturn.opreturnoutput";
 
 
             ResultSet rs = stmnt.executeQuery(protocolquery); //Protocol Result Set
+            ResultSet yrs = stmnt2.executeQuery(yearQuery); //Year result Set
 
 
             while(rs.next()){
 
-                Integer transactionsPerYear;
                 Integer transactionsPerProtocol;
                 List<Integer> chartData = new ArrayList<>();
 
@@ -167,6 +171,69 @@ public class ChartServlet extends HttpServlet {
 
             }
 
+            while(yrs.next()){
+
+                Integer transactionsPerYear;
+                Integer yearDummy = yrs.getInt("year");
+
+                ResultSet tpyrs; //Transactions Per Year Result Set
+
+                switch(yearDummy){
+
+                    case 2013:
+
+                        tpyrs =  stmnt3.executeQuery("SELECT count(protocol) AS transactionsperyear " +
+                                "FROM opreturn.opreturnoutput" +
+                                " WHERE txdate LIKE  \"%2013%\"");
+                        while(tpyrs.next()){
+
+                            transactionsPerYear = tpyrs.getInt("transactionsperyear");
+                            transactionsPerYearMap.put(yearDummy,transactionsPerYear);
+                        }
+
+                        break;
+
+                    case 2014:
+
+                        tpyrs =  stmnt3.executeQuery("SELECT count(protocol) AS transactionsperyear " +
+                                "FROM opreturn.opreturnoutput" +
+                                " WHERE txdate LIKE  \"%2014%\"");
+                        while(tpyrs.next()){
+
+                            transactionsPerYear = tpyrs.getInt("transactionsperyear");
+                            transactionsPerYearMap.put(yearDummy,transactionsPerYear);
+                        }
+
+                        break;
+
+                    case 2015:
+
+                        tpyrs =  stmnt3.executeQuery("SELECT count(protocol) AS transactionsperyear " +
+                                "FROM opreturn.opreturnoutput" +
+                                " WHERE txdate LIKE  \"%2015%\"");
+                        while(tpyrs.next()){
+
+                            transactionsPerYear = tpyrs.getInt("transactionsperyear");
+                            transactionsPerYearMap.put(yearDummy,transactionsPerYear);
+                        }
+
+                        break;
+
+                    case 2016:
+
+                        tpyrs =  stmnt3.executeQuery("SELECT count(protocol) AS transactionsperyear " +
+                                "FROM opreturn.opreturnoutput" +
+                                " WHERE txdate LIKE  \"%2016%\"");
+                        while(tpyrs.next()){
+
+                            transactionsPerYear = tpyrs.getInt("transactionsperyear");
+                            transactionsPerYearMap.put(yearDummy,transactionsPerYear);
+                        }
+
+                        break;
+                }
+            }
+
 
 
         }catch(SQLException e){
@@ -184,10 +251,17 @@ public class ChartServlet extends HttpServlet {
 
                     stmnt.close();
 
-                if(stmnt1 != null){
+                if(stmnt1 != null)
 
                     stmnt1.close();
-                }
+
+                if(stmnt2 != null)
+
+                    stmnt2.close();
+
+                if(stmnt3 != null)
+
+                    stmnt3.close();
 
             } catch(SQLException e){
 
