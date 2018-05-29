@@ -5,11 +5,15 @@
   Time: 16:02
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@page contentType="text/html;charset=UTF-8" language="java" %>
+<%@page import="java.util.List"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.HashMap"%>
 <%@page import="java.sql.Connection"%>
 <%@page import="DBconnector.ConnectionManager"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import ="Servlets.OpReturnData"%>
+
 
 <html>
 <head>
@@ -125,9 +129,16 @@
                         </tr>
                         </tfoot>
                         <tbody>
-                        <c:forEach items = "${allOpData}" var = "AllOpData">
+                        <c:forEach items = "${protocolTable}" var = "entry">
                             <tr>
-
+                                <td><c:out value="${entry.key}"/></td>
+                                <td><c:out value="${entry.value[0]}"/></td>
+                                <td><c:out value="${entry.value[1]}"/></td>
+                                <td><c:out value="${entry.value[2]}"/></td>
+                                <td><c:out value="${entry.value[3]}"/></td>
+                                <td><c:out value="${entry.value[4]}"/></td>
+                                <td><c:out value="${entry.value[5]}"/></td>
+                                <td><c:out value="${entry.value[6]}"/></td>
                             </tr>
                         </c:forEach>
                         </tbody>
