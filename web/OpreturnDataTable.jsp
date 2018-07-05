@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%--
   Created by IntelliJ IDEA.
   User: giaco
@@ -24,13 +25,13 @@
     <meta name="author" content="">
     <title>MyBlockchain</title>
     <!-- Bootstrap core CSS-->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="Blockchain Info/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom fonts for this template-->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="Blockchain Info/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!-- Page level plugin CSS-->
-    <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+    <link href="Blockchain Info/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin.css" rel="stylesheet">
+    <link href="Blockchain Info/css/sb-admin.css" rel="stylesheet">
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
@@ -129,18 +130,19 @@
                         </tr>
                         </tfoot>
                         <tbody>
-                        <c:forEach items = "${protocolTable}" var = "entry">
+                        <c:forEach items = "${protocolTable}" var = "protocolTable">
                             <tr>
-                                <td><c:out value="${entry.key}"/></td>
-                                <td><c:out value="${entry.value[0]}"/></td>
-                                <td><c:out value="${entry.value[1]}"/></td>
-                                <td><c:out value="${entry.value[2]}"/></td>
-                                <td><c:out value="${entry.value[3]}"/></td>
-                                <td><c:out value="${entry.value[4]}"/></td>
-                                <td><c:out value="${entry.value[5]}"/></td>
-                                <td><c:out value="${entry.value[6]}"/></td>
+                                <td><c:out value="${protocolTable.key}"/></td>
+                                <td><c:out value="${protocolTable.value[0]}"/></td>
+                                <td><c:out value="${protocolTable.value[1]}"/></td>
+                                <td><c:out value="${protocolTable.value[2]}"/></td>
+                                <td><c:out value="${protocolTable.value[3]}"/></td>
+                                <td><c:out value="${protocolTable.value[4]}"/></td>
+                                <td><c:out value="${protocolTable.value[5]}"/></td>
+                                <td><c:out value="${protocolTable.value[6]}"/></td>
                             </tr>
                         </c:forEach>
+
                         </tbody>
                     </table>
                 </div>

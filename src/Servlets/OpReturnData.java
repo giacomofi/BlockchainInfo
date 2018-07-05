@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
+import java.io.PrintWriter;
 import java.util.*;
 
 import java.io.IOException;
@@ -21,7 +22,7 @@ import java.sql.Statement;
 import DBconnector.ConnectionManager;
 
 
-@WebServlet(name = "OpReturnData")
+@WebServlet(name = "OpReturnData",urlPatterns = "/Table.do")
 public class OpReturnData extends HttpServlet {
 
 
@@ -46,8 +47,13 @@ public class OpReturnData extends HttpServlet {
 
         dummy.addCategories();
 
+        String s = "Heilà";
 
-        request.setAttribute("protocolTable",protocolTable);
+
+        request.setAttribute("protocolTable", protocolTable);
+        request.setAttribute("s",s);
+        request.getRequestDispatcher("/web/OpreturnDataTable.jsp").forward(request,response);
+
     }
 
     public void addCategories(){

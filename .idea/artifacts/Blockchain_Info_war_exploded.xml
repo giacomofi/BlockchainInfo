@@ -6,6 +6,7 @@
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="Blockchain Info" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/OpreturnDataTable.jsp" />
         </element>
       </element>
     </root>
